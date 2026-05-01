@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Grid Frame Consultancy | Structural Engineering Excellence</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Additional styling for the video showcase — ensures seamless integration and modern look */
+        .video-showcase {
+            background: #fafaf9;
+            padding: 5rem 0;
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.2);
+            background: #0a0c10; /* dark bg for video edges */
+            margin-top: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .video-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+            vertical-align: middle;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+        }
+        .video-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 28px 40px -18px rgba(0, 0, 0, 0.25);
+        }
+        @media (max-width: 768px) {
+            .video-showcase {
+                padding: 3rem 0;
+            }
+            .video-container {
+                border-radius: 20px;
+            }
+        }
+        .video-showcase .section-header {
+            margin-bottom: 1.5rem;
+        }
+        .video-showcase .section-header h2 {
+            color: #1e2a3e;
+        }
+        .video-caption {
+            text-align: center;
+            margin-top: 1.6rem;
+        }
+        .video-caption p {
+            font-size: 0.9rem;
+            color: #5a6e7a;
+            font-weight: 500;
+        }
+        .video-caption i {
+            margin-right: 6px;
+            color: #c49a6c;
+        }
+        /* ensure no overflow conflicts */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="container nav-container">
+        <img src="Image/logo.svg" alt="Grid Frame Logo" width="100" height="100">
+        <div class="logo">
+            <h1>GRID FRAME <span>CONSULTANCY</span></h1>
+            <p class="owner-tag">Manoj Kumar | Founder</p> 
+        </div>
+        <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+        <span class="hero-badge">Design Your Dream Structure</span>
+        <h1>Engineering Excellence <br>With Grid Frame</h1>
+        <p>We provide innovative structural consultancy, residential & commercial designs, and project execution with precision.</p>
+        <div class="hero-buttons">
+            <a href="projects.html" class="btn btn-primary">View Our Work <i class="fas fa-arrow-right"></i></a>
+            <a href="contact.html" class="btn btn-outline">Get a Quote</a>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about">
+    <div class="container about-grid">
+        <div class="about-image">
+            <img src="Image/House.webp" alt="About Grid Frame">
+        </div>
+        <div class="about-text">
+            <span class="section-tag">About Us</span>
+            <h2>We Provide You Best <span>Structural Experience</span></h2>
+            <p>Our signature design and engineering process comes standard – refined, remodelled, new and enjoyable. From concept to completion, we ensure quality and safety.</p>
+            <p>Grid Frame Consultancy, led by Manoj Kumar, has delivered 40+ successful projects across Coimbatore. We blend modern techniques with sustainable practices.</p>
+            <a href="services.html" class="btn-link">Learn More <i class="fas fa-chevron-right"></i></a>
+            <div class="signature">Manoj Kumar</div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="services">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Our Services</span>
+            <h2>What We're Providing</h2>
+            <p>Comprehensive consultancy for all your structural needs</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-building"></i>
+                <h3>Residential Design</h3>
+                <p>Modern, safe and beautiful homes tailored to your lifestyle.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-store"></i>
+                <h3>Commercial Design</h3>
+                <p>Offices, retail spaces and commercial complexes with smart layouts.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Corporate Design</h3>
+                <p>High-rise corporate buildings with efficient structural systems.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-utensils"></i>
+                <h3>Hospitality Design</h3>
+                <p>Hotels, restaurants and resorts blending aesthetics with safety.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-industry"></i>
+                <h3>Industrial Design</h3>
+                <p>Warehouses, factories and industrial sheds with high load capacity.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-drafting-compass"></i>
+                <h3>Interior & Structural Audit</h3>
+                <p>Complete structural audits and interior remodeling solutions.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Completed Projects Preview -->
+<section class="completed-projects">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Portfolio</span>
+            <h2>Completed Projects</h2>
+            <p>Some of our finest works</p>
+        </div>
+        <div class="projects-preview">
+            <div class="project-preview-card">
+                <img src="Image/House-1.webp" alt="Modern Commercial Tower">
+                <div class="overlay">
+                    <h3>Modern Commercial Tower</h3>
+                    <p>Coimbatore | 2025</p>
+                </div>
+            </div>
+            <div class="project-preview-card">
+                <img src="Image/House-2.webp" alt="Luxury Villa">
+                <div class="overlay">
+                    <h3>Luxury Villa</h3>
+                    <p>Saibaba Colony | 2024</p>
+                </div>
+            </div>
+            <div class="project-preview-card">
+                <img src="Image/House-3.webp" alt="Industrial Warehouse">
+                <div class="overlay">
+                    <h3>Industrial Warehouse</h3>
+                    <p>KK Pudur | 2025</p>
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <a href="projects.html" class="btn btn-primary">View All Projects <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats">
+    <div class="container stats-grid">
+        <div class="stat-item">
+            <h3><span class="counter" data-target="40">0</span>+</h3>
+            <p>Projects Completed</p>
+        </div>
+        <div class="stat-item">
+            <h3><span class="counter" data-target="250">0</span>+</h3>
+            <p>Happy Clients</p>
+        </div>
+        <div class="stat-item">
+            <h3><span class="counter" data-target="15">0</span>+</h3>
+            <p>Years Experience</p>
+        </div>
+        <div class="stat-item">
+            <h3><span class="counter" data-target="10">0</span>+</h3>
+            <p>Awards won</p>
+        </div>
+    </div>
+</section>
+
+<!-- ========== VIDEO SHOWCASE: LOCAL ASSET VIDEO ADDED ========== -->
+<section class="video-showcase">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Our Process in Motion</span>
+            <h2>Engineering In Action</h2>
+            <p>From raw sketches to stunning structures — watch the Grid Frame difference</p>
+        </div>
+        <div class="video-container">
+            <!-- LOCAL VIDEO ASSET: "assets/video/web-video.mp4" as per file structure -->
+            <video controls autoplay muted loop playsinline poster="https://images.pexels.com/photos/159213/house-home-office-building-159213.jpeg?auto=compress&cs=tinysrgb&w=600">
+                <source src="assets/video/web-video.mp4" type="video/mp4">
+                <!-- Quick fallback: if the local asset is not found, show message -->
+                Your browser does not support the video tag. Please check that the file 'assets/video/web video.mp4' exists.
+            </video>
+        </div>
+        <div class="video-caption">
+            <p><i class="fas fa-play-circle"></i> Real project walkthrough | Quality control & modern execution by Grid Frame</p>
+        </div>
+    </div>
+</section>
+<!-- ========== END OF VIDEO SECTION ========== -->
+
+<!-- Testimonials Section -->
+<section class="testimonials">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Testimonials</span>
+            <h2>What They Say About Us</h2>
+        </div>
+        <div class="testimonial-slider">
+            <div class="testimonial-card active">
+                <i class="fas fa-quote-left"></i>
+                <p>"Grid Frame Consultancy delivered our commercial complex on time with excellent structural quality. Manoj Kumar's team is highly professional."</p>
+                <h4>– Ramesh S.</h4>
+                <span>Client</span>
+            </div>
+            <div class="testimonial-card">
+                <i class="fas fa-quote-left"></i>
+                <p>"They designed our luxury villa with perfect attention to detail. Highly recommend for residential projects."</p>
+                <h4>– Priya M.</h4>
+                <span>Homeowner</span>
+            </div>
+            <div class="testimonial-card">
+                <i class="fas fa-quote-left"></i>
+                <p>"Excellent industrial shed planning and execution. Very satisfied with their service."</p>
+                <h4>– Kumaravel N.</h4>
+                <span>Industrialist</span>
+            </div>
+        </div>
+        <div class="testimonial-controls">
+            <button class="prev-testimonial"><i class="fas fa-chevron-left"></i></button>
+            <button class="next-testimonial"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+</section>
+
+<!-- Blog / Insights Section (links to individual blog pages) -->
+<section class="blog">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Blog & Feeds</span>
+            <h2>Blog & Insights</h2>
+            <p>Latest trends in structural engineering</p>
+        </div>
+        <div class="blog-grid">
+            <div class="blog-card">
+                <img src="Image/Interior-1.webp" alt="Sustainable Materials">
+                <h3>Future of Architecture: Sustainable Materials</h3>
+                <p>Discover how eco-friendly materials are changing the construction industry.</p>
+                <a href="sustainable-materials.html">Read More →</a>
+            </div>
+            <div class="blog-card">
+                <img src="Image/Interior-2.webp" alt="Structural Audit">
+                <h3>Why Structural Audit is Essential for Old Buildings</h3>
+                <p>Learn the importance of regular structural audits for safety.</p>
+                <a href="structural-audit.html">Read More →</a>
+            </div>
+            <div class="blog-card">
+                <img src="Image/Interior-3.webp" alt="Cost Reduction">
+                <h3>Cost Reduction Tips in Construction</h3>
+                <p>Practical ways to save money without compromising quality.</p>
+                <a href="cost-reduction-tips.html">Read More →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call To Action -->
+<section class="cta">
+    <div class="container">
+        <h2>Ready to Build Your Dream?</h2>
+        <p>Contact Grid Frame Consultancy for a free consultation.</p>
+        <a href="contact.html" class="btn btn-primary">Send Request <i class="fas fa-paper-plane"></i></a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container footer-grid">
+        <div class="footer-col">
+            <h3>GRID FRAME <span>CONSULTANCY</span></h3>
+            <p>Manoj Kumar, Founder</p>
+            <p>Providing excellence in structural engineering since 2012.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Our Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Our Services</h4>
+            <ul>
+                <li>Residential Design</li>
+                <li>Commercial Design</li>
+                <li>Industrial Projects</li>
+                <li>Structural Audit</li>
+                <li>Interior Design</li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Newsletter</h4>
+            <p>Sign up for tips and latest news</p>
+            <form id="newsletterForm">
+                <input type="email" placeholder="Your email" required>
+                <button type="submit"><i class="fas fa-paper-plane"></i></button>
+            </form>
+            <div class="contact-info-footer">
+                <p><i class="fas fa-phone-alt"></i> +91 9994520061</p>
+                <p><i class="fas fa-envelope"></i> akarvina@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> NO.6 Collector Sivakumar St, KK Pudur, Saibaba colony, Coimbatore-641038</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Grid Frame Consultancy. All rights reserved. Designed for excellence.</p>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+<!-- Embedded additional script to ensure video autoplay compatibility and preserve all core features (counters, testimonials, mobile nav) 
+     Does not override existing script.js but adds safety for video loading -->
+<script>
+    (function() {
+        // ensure video element gets best autoplay experience while respecting user preference
+        const videoElement = document.querySelector('.video-container video');
+        if (videoElement) {
+            // Additional robustness: if browser blocks autoplay due to policy, user can still click play
+            videoElement.addEventListener('play', () => {
+                // optional: no intervention needed
+            });
+            // For mobile devices, ensure muted autoplay works as expected
+            videoElement.muted = true;
+            let playPromise = videoElement.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(error => {
+                    console.log("Autoplay prevented, user can start manually", error);
+                    // show subtle hint if needed, but not intrusive
+                });
+            }
+        }
+        // Ensure existing counters, testimonials, navigation from script.js remains untouched (external script handles that)
+        // but if script.js missing, we provide fallback for mobile toggle? Provided script.js exists — nothing else needed.
+        // Additional fallback for mobile toggle if external script fails (just a safety)
+        if (typeof mobileToggleFallback === 'undefined') {
+            const toggleBtn = document.getElementById('mobileToggle');
+            const navMenu = document.getElementById('navMenu');
+            if (toggleBtn && navMenu && !window.mobileToggleListenerAttached) {
+                toggleBtn.addEventListener('click', function() {
+                    navMenu.classList.toggle('active');
+                });
+                window.mobileToggleListenerAttached = true;
+            }
+        }
+        // Fallback for newsletter form submit
+        const newsletterForm = document.getElementById('newsletterForm');
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const input = this.querySelector('input[type="email"]');
+                if (input && input.value.trim() !== '') {
+                    alert('Thank you for subscribing! We\'ll keep you updated.');
+                    input.value = '';
+                } else {
+                    alert('Please enter a valid email address.');
+                }
+            });
+        }
+        // Counter animation fallback in case script.js counters not defined
+        if (typeof initCounters === 'undefined') {
+            const counters = document.querySelectorAll('.counter');
+            const speed = 200;
+            const animateCounter = (counter) => {
+                const target = +counter.getAttribute('data-target');
+                let count = 0;
+                const increment = target / speed;
+                const updateCounter = () => {
+                    count += increment;
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCounter();
+            };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const counter = entry.target;
+                        if (counter.innerText === '0' || counter.innerText === '0') {
+                            animateCounter(counter);
+                        }
+                        observer.unobserve(counter);
+                    }
+                });
+            }, { threshold: 0.5 });
+            counters.forEach(counter => observer.observe(counter));
+        }
+        // simple testimonial slider fallback if script.js fails
+        if (typeof initTestimonials === 'undefined') {
+            let currentTestimonial = 0;
+            const testimonialCards = document.querySelectorAll('.testimonial-card');
+            const prevBtn = document.querySelector('.prev-testimonial');
+            const nextBtn = document.querySelector('.next-testimonial');
+            function showTestimonial(index) {
+                if (!testimonialCards.length) return;
+                testimonialCards.forEach((card, i) => {
+                    card.classList.toggle('active', i === index);
+                });
+            }
+            if (prevBtn && nextBtn && testimonialCards.length) {

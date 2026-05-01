@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Frame Consultancy | Projects</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="container nav-container">
+        <img src="Image/logo.svg" alt="logo"width="100" height="100"> 
+        <div class="logo"><h1>GRID FRAME <span>CONSULTANCY</span></h1><p class="owner-tag">Manoj Kumar | Founder</p></div>
+        <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="page-header">
+    <div class="container">
+        <h1>Completed Projects</h1>
+        <p>Our portfolio of excellence</p>
+    </div>
+</section>
+
+<section class="projects-gallery">
+    <div class="container">
+        <div class="projects-filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="residential">Residential</button>
+            <button class="filter-btn" data-filter="commercial">Commercial</button>
+            <button class="filter-btn" data-filter="industrial">Industrial</button>
+        </div>
+        <div class="projects-grid-full">
+            <div class="project-card" data-category="commercial">
+                <img src="Image/House-1.webp" alt="Commercial Tower">
+                <div class="project-info">
+                    <h3>Modern Commercial Tower</h3>
+                    <p>Coimbatore | 2025</p>
+                    <p>15-story commercial building with green features.</p>
+                </div>
+            </div>
+            <div class="project-card" data-category="residential">
+                <img src="Image/House-2.webp" alt="Luxury Villa">
+                <div class="project-info">
+                    <h3>Luxury Villa</h3>
+                    <p>Saibaba Colony | 2024</p>
+                    <p>5000 sq.ft. modern villa with swimming pool.</p>
+                </div>
+            </div>
+            <div class="project-card" data-category="industrial">
+                <img src="Image/House-3.webp" alt="Industrial Shed">
+                <div class="project-info">
+                    <h3>Industrial Warehouse</h3>
+                    <p>KK Pudur | 2025</p>
+                    <p>Pre-engineered steel structure, 10,000 sq.ft.</p>
+                </div>
+            </div>
+            <!-- Add more projects as needed -->
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container footer-grid"><div class="footer-col"><h3>GRID FRAME <span>CONSULTANCY</span></h3><p>Manoj Kumar, Founder</p></div><div class="footer-col"><h4>Our Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="projects.html">Projects</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact Us</a></li></ul></div><div class="footer-col"><h4>Contact</h4><p><i class="fas fa-phone-alt"></i> +91 9994520061</p><p><i class="fas fa-map-marker-alt"></i> NO.6 Collector Sivakumar St, KK Pudur, Saibaba colony, Coimbatore-641038</p></div></div>
+    <div class="footer-bottom"><p>&copy; 2026 Grid Frame Consultancy</p></div>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>
