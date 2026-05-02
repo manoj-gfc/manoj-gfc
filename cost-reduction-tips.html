@@ -2,11 +2,63 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Cost Reduction Tips | Grid Frame Consultancy</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Footer styles – exactly as per the reference image */
+        .footer-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+        .footer-col {
+            flex: 1;
+            min-width: 200px;
+        }
+        .footer-col a {
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+        .footer-col a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-col li {
+            margin-bottom: 0.5rem;
+        }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 1.5rem;
+            margin-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .footer-col i {
+            width: 1.6rem;
+            display: inline-block;
+        }
+        .industries-list {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 0.5rem;
+        }
+        .industries-list li {
+            margin-bottom: 0.25rem;
+        }
+        @media (max-width: 768px) {
+            .footer-grid {
+                flex-direction: column;
+                gap: 1.8rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -87,34 +139,88 @@
     </div>
 </section>
 
-<!-- Footer -->
+<!-- ========== UPDATED FOOTER (matching the reference image) ========== -->
 <footer class="footer">
-    <div class="container footer-grid">
-        <div class="footer-col">
-            <h3>GRID FRAME <span>CONSULTANCY</span></h3>
-            <p>Manoj Kumar, Founder</p>
+    <div class="container">
+        <div class="footer-grid">
+            <!-- Column 1: Brand & Industries -->
+            <div class="footer-col">
+                <h3>GRID FRAME <span>CONSULTANCY</span></h3>
+                <p><strong>Manoj Kumar, Founder</strong></p>
+                <p style="font-size: 0.9rem; opacity: 0.9;">Providing excellence in structural engineering since 2012.</p>
+                <ul class="industries-list">
+                    <li>🏠 Residential</li>
+                    <li>🏢 Commercial</li>
+                    <li>🏭 Industrial — structural clarity.</li>
+                </ul>
+            </div>
+            
+            <!-- Column 2: Our Links -->
+            <div class="footer-col">
+                <h4>Our Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <!-- Column 3: Connect & Consult (full contact + WhatsApp details) -->
+            <div class="footer-col">
+                <h4>Connect & Consult</h4>
+                <p><i class="fas fa-phone-alt"></i> <a href="tel:+919994520061">+91 99945 20061</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:akarvina@gmail.com">akarvina@gmail.com</a></p>
+                <p><i class="fas fa-map-marker-alt"></i> NO.6 Collector Sivakumar St, KK Pudur,<br>Sallababa colony, Coimbatore - 641038</p>
+                
+                <!-- Business Chat (WhatsApp) -->
+                <p style="margin-top: 0.8rem;">
+                    <i class="fab fa-whatsapp" style="color:#25D366;"></i> 
+                    <a href="https://wa.me/919994520061?text=Hello%20Grid%20Frame%20Consultancy%2C%20I%27d%20like%20to%20discuss%20a%20structural%20project" target="_blank" rel="noopener noreferrer">
+                        Business Chat: Chat with our expert →
+                    </a>
+                </p>
+                <!-- WhatsApp Channel -->
+                <p>
+                    <i class="fab fa-whatsapp" style="color:#25D366;"></i> 
+                    <a href="#" target="_blank" rel="noopener noreferrer" title="WhatsApp channel updates - coming soon">
+                        WhatsApp Channel: Follow for updates →
+                    </a>
+                    <br><span style="font-size: 0.75rem; opacity: 0.7;">Get insights, offers & industry news</span>
+                </p>
+            </div>
         </div>
-        <div class="footer-col">
-            <h4>Quick Links</h4>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+        
+        <!-- Copyright line -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 Grid Frame Consultancy | Structural clarity since 2012 | All rights reserved.</p>
         </div>
-        <div class="footer-col">
-            <h4>Contact</h4>
-            <p><i class="fas fa-phone-alt"></i> +91 9994520061</p>
-            <p><i class="fas fa-map-marker-alt"></i> NO.6 Collector Sivakumar St, KK Pudur, Saibaba colony, Coimbatore-641038</p>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2026 Grid Frame Consultancy | All rights reserved</p>
     </div>
 </footer>
 
 <script src="js/script.js"></script>
+<script>
+    // Mobile toggle functionality
+    (function() {
+        const toggleBtn = document.getElementById('mobileToggle');
+        const navMenu = document.getElementById('navMenu');
+        if(toggleBtn && navMenu) {
+            toggleBtn.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+                const icon = toggleBtn.querySelector('i');
+                if(icon) {
+                    if(navMenu.classList.contains('active')) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-times');
+                    } else {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                }
+            });
+        }
+    })();
+</script>
 </body>
 </html>

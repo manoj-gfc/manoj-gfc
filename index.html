@@ -19,7 +19,7 @@
             border-radius: 28px;
             overflow: hidden;
             box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.2);
-            background: #0a0c10; /* dark bg for video edges */
+            background: #0a0c10;
             margin-top: 2rem;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
@@ -62,11 +62,115 @@
             margin-right: 6px;
             color: #c49a6c;
         }
-        /* ensure no overflow conflicts */
+        /* Floating WhatsApp Chat Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: #fff;
+            border-radius: 60px;
+            text-align: center;
+            font-size: 28px;
+            z-index: 1000;
+            width: 64px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.08);
+            color: #fff;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+        }
+        .whatsapp-float i {
+            font-size: 36px;
+        }
+        .whatsapp-float span {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                width: 52px;
+                height: 52px;
+                bottom: 20px;
+                right: 20px;
+            }
+            .whatsapp-float i {
+                font-size: 28px;
+            }
+        }
+        /* Footer WhatsApp Connect Styles */
+        .whatsapp-connect {
+            margin-top: 1.2rem;
+            padding-top: 0.8rem;
+            border-top: 1px solid rgba(255,255,255,0.15);
+        }
+        .whatsapp-connect p {
+            margin: 0.6rem 0;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .whatsapp-connect p i {
+            font-size: 1.2rem;
+            width: 24px;
+            color: #25D366;
+        }
+        .whatsapp-connect a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.2s ease;
+            font-weight: 500;
+        }
+        .whatsapp-connect a:hover {
+            color: #25D366;
+            text-decoration: underline;
+        }
+        .footer-col .contact-info-footer {
+            margin-top: 0.5rem;
+        }
+        /* Updated icon colors for contact info (phone, email, location) */
+        .contact-info-footer i {
+            color: #c49a6c !important;
+            margin-right: 8px;
+            width: 20px;
+        }
+        /* Ensure container consistency */
         .container {
             max-width: 1280px;
             margin: 0 auto;
             padding: 0 24px;
+        }
+        /* Updated consultancy text colour — copper/gold accent */
+        .logo h1 span,
+        .footer-col h3 span,
+        .about-text h2 span {
+            color: #c49a6c;
+        }
+        /* Slight refinement for the owner tag and brand consistency */
+        .owner-tag {
+            color: #c49a6c;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+        .signature {
+            color: #c49a6c;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        /* Address line spacing for cleanliness */
+        .address-line {
+            display: block;
+            line-height: 1.5;
         }
     </style>
 </head>
@@ -233,10 +337,8 @@
             <p>From raw sketches to stunning structures — watch the Grid Frame difference</p>
         </div>
         <div class="video-container">
-            <!-- LOCAL VIDEO ASSET: "assets/web-video.mp4" as per file structure -->
             <video controls autoplay muted loop playsinline poster="https://images.pexels.com/photos/159213/house-home-office-building-159213.jpeg?auto=compress&cs=tinysrgb&w=600">
                 <source src="assets\web-video.mp4" type="video/mp4">
-                <!-- Quick fallback: if the local asset is not found, show message -->
                 Your browser does not support the video tag. Please check that the file 'assets/video/web video.mp4' exists.
             </video>
         </div>
@@ -317,11 +419,17 @@
     <div class="container">
         <h2>Ready to Build Your Dream?</h2>
         <p>Contact Grid Frame Consultancy for a free consultation.</p>
-        <a href="contact.html" class="btn btn-primary">Send Request <i class="fas fa-paper-plane"></i></a>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="contact.html" class="btn btn-primary">Send Request <i class="fas fa-paper-plane"></i></a>
+            <!-- Additional subtle WhatsApp Channel Feature within CTA (optional extra visibility) -->
+            <a href="https://whatsapp.com/channel/0029Vb7yCZnDTkK8tWmI1b38" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="background: transparent; border-color: #25D366; color: #25D366;">
+                <i class="fab fa-whatsapp"></i> Join Our Channel
+            </a>
+        </div>
     </div>
 </section>
 
-<!-- Footer -->
+<!-- Footer (Newsletter removed, contact & WhatsApp features remain, address properly formatted) -->
 <footer>
     <div class="container footer-grid">
         <div class="footer-col">
@@ -350,17 +458,21 @@
             </ul>
         </div>
         <div class="footer-col">
-            <h4>Newsletter</h4>
-            <p>Sign up for tips and latest news</p>
-            <form id="newsletterForm">
-                <input type="email" placeholder="Your email" required>
-                <button type="submit"><i class="fas fa-paper-plane"></i></button>
-            </form>
+            <!-- Newsletter removed as requested -->
             <div class="contact-info-footer">
                 <p><i class="fas fa-phone-alt"></i> +91 9994520061</p>
                 <p><i class="fas fa-envelope"></i> akarvina@gmail.com</p>
-                <p><i class="fas fa-map-marker-alt"></i> NO.6 Collector Sivakumar St, KK Pudur, Saibaba colony, Coimbatore-641038</p>
+                <p><i class="fas fa-map-marker-alt"></i> 
+                    <span class="address-line">NO.6 Collector Sivakumar St, KK Pudur,</span>
+                    <span class="address-line">Saibaba colony, Coimbatore - 641038</span>
+                </p>
             </div>
+            <!-- ========== TWO WHATSAPP FEATURES (CHAT & CHANNEL) INTEGRATED HERE ========== -->
+            <div class="whatsapp-connect">
+                <p><i class="fab fa-whatsapp"></i> <strong>Business Chat:</strong> <a href="https://wa.me/message/UNPLO75IUG6ID1" target="_blank" rel="noopener noreferrer">Chat with our expert →</a></p>
+                <p><i class="fab fa-whatsapp"></i> <strong>WhatsApp Channel:</strong> <a href="https://whatsapp.com/channel/0029Vb7yCZnDTkK8tWmI1b38" target="_blank" rel="noopener noreferrer">Follow for updates & insights →</a></p>
+            </div>
+            <!-- ========== END WHATSAPP FEATURES ========== -->
         </div>
     </div>
     <div class="footer-bottom">
@@ -368,97 +480,20 @@
     </div>
 </footer>
 
+<!-- FLOATING WHATSAPP CHAT BUTTON (direct message link) -->
+<a href="https://wa.me/message/UNPLO75IUG6ID1" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span>Chat</span>
+</a>
+
 <script src="js/script.js"></script>
-<!-- Embedded additional script to ensure video autoplay compatibility and preserve all core features (counters, testimonials, mobile nav) 
-     Does not override existing script.js but adds safety for video loading -->
 <script>
     (function() {
         // ensure video element gets best autoplay experience while respecting user preference
         const videoElement = document.querySelector('.video-container video');
         if (videoElement) {
-            // Additional robustness: if browser blocks autoplay due to policy, user can still click play
-            videoElement.addEventListener('play', () => {
-                // optional: no intervention needed
-            });
-            // For mobile devices, ensure muted autoplay works as expected
             videoElement.muted = true;
             let playPromise = videoElement.play();
             if (playPromise !== undefined) {
                 playPromise.catch(error => {
                     console.log("Autoplay prevented, user can start manually", error);
-                    // show subtle hint if needed, but not intrusive
-                });
-            }
-        }
-        // Ensure existing counters, testimonials, navigation from script.js remains untouched (external script handles that)
-        // but if script.js missing, we provide fallback for mobile toggle? Provided script.js exists — nothing else needed.
-        // Additional fallback for mobile toggle if external script fails (just a safety)
-        if (typeof mobileToggleFallback === 'undefined') {
-            const toggleBtn = document.getElementById('mobileToggle');
-            const navMenu = document.getElementById('navMenu');
-            if (toggleBtn && navMenu && !window.mobileToggleListenerAttached) {
-                toggleBtn.addEventListener('click', function() {
-                    navMenu.classList.toggle('active');
-                });
-                window.mobileToggleListenerAttached = true;
-            }
-        }
-        // Fallback for newsletter form submit
-        const newsletterForm = document.getElementById('newsletterForm');
-        if (newsletterForm) {
-            newsletterForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                const input = this.querySelector('input[type="email"]');
-                if (input && input.value.trim() !== '') {
-                    alert('Thank you for subscribing! We\'ll keep you updated.');
-                    input.value = '';
-                } else {
-                    alert('Please enter a valid email address.');
-                }
-            });
-        }
-        // Counter animation fallback in case script.js counters not defined
-        if (typeof initCounters === 'undefined') {
-            const counters = document.querySelectorAll('.counter');
-            const speed = 200;
-            const animateCounter = (counter) => {
-                const target = +counter.getAttribute('data-target');
-                let count = 0;
-                const increment = target / speed;
-                const updateCounter = () => {
-                    count += increment;
-                    if (count < target) {
-                        counter.innerText = Math.ceil(count);
-                        requestAnimationFrame(updateCounter);
-                    } else {
-                        counter.innerText = target;
-                    }
-                };
-                updateCounter();
-            };
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const counter = entry.target;
-                        if (counter.innerText === '0' || counter.innerText === '0') {
-                            animateCounter(counter);
-                        }
-                        observer.unobserve(counter);
-                    }
-                });
-            }, { threshold: 0.5 });
-            counters.forEach(counter => observer.observe(counter));
-        }
-        // simple testimonial slider fallback if script.js fails
-        if (typeof initTestimonials === 'undefined') {
-            let currentTestimonial = 0;
-            const testimonialCards = document.querySelectorAll('.testimonial-card');
-            const prevBtn = document.querySelector('.prev-testimonial');
-            const nextBtn = document.querySelector('.next-testimonial');
-            function showTestimonial(index) {
-                if (!testimonialCards.length) return;
-                testimonialCards.forEach((card, i) => {
-                    card.classList.toggle('active', i === index);
-                });
-            }
-            if (prevBtn && nextBtn && testimonialCards.length) {

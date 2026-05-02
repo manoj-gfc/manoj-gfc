@@ -2,18 +2,451 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grid Frame Consultancy | Contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Contact | Grid Frame Consultancy</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* ========== BASE & RESET ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.5;
+            color: #1e2a3e;
+        }
+        
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* ========== HERO SECTION ========== */
+        .contact-hero {
+            background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+            padding: 3rem 0;
+            text-align: center;
+            color: white;
+        }
+        .contact-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.75rem;
+            font-family: 'Playfair Display', serif;
+        }
+        .contact-hero p {
+            font-size: 1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* ========== CONTACT SECTION ========== */
+        .contact-section {
+            padding: 4rem 0;
+            background: #fefefe;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+            align-items: start;
+        }
+        
+        /* Left card */
+        .contact-info-card {
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.08);
+            padding: 1.75rem;
+        }
+        .contact-info-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.25rem;
+            color: #1e2a3e;
+            font-weight: 700;
+        }
+        .info-details {
+            margin: 1.5rem 0;
+        }
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.85rem;
+            margin-bottom: 1.25rem;
+        }
+        .info-item i {
+            font-size: 1.2rem;
+            color: #c49a6c;
+            width: 26px;
+            margin-top: 2px;
+        }
+        .info-item p, .info-item a {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #2d3e50;
+            line-height: 1.45;
+            text-decoration: none;
+        }
+        .info-item a:hover {
+            color: #c49a6c;
+            text-decoration: underline;
+        }
+        .whatsapp-badge {
+            background: #e8f5e9;
+            border-radius: 16px;
+            padding: 1rem;
+            margin-top: 1.5rem;
+            border-left: 4px solid #25D366;
+        }
+        .whatsapp-badge p {
+            margin: 0.4rem 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            font-size: 0.9rem;
+        }
+        .whatsapp-badge i {
+            font-size: 1.2rem;
+            color: #25D366;
+        }
+        .whatsapp-badge a {
+            font-weight: 600;
+            color: #1e2a3e;
+            text-decoration: none;
+        }
+        .whatsapp-badge a:hover {
+            color: #128C7E;
+        }
+        .btn-outline-wa {
+            background: transparent;
+            border: 1px solid #25D366;
+            color: #25D366;
+            padding: 6px 16px;
+            border-radius: 40px;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.2s;
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+        .btn-outline-wa:hover {
+            background: #25D366;
+            color: white;
+        }
+        
+        /* ========== RIGHT SIDE: HORIZONTAL CUSTOM FORM ========== */
+        .form-wrapper {
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.08);
+            padding: 1.75rem;
+        }
+        .form-wrapper h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #1e2a3e;
+            text-align: center;
+        }
+        .form-wrapper > p {
+            color: #5a6e7a;
+            font-size: 0.9rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Custom horizontal form styles */
+        .custom-contact-form {
+            width: 100%;
+        }
+        .form-row {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.2rem;
+        }
+        .form-row .form-group {
+            flex: 1;
+            min-width: 140px;
+        }
+        .form-group {
+            margin-bottom: 1.2rem;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 0.4rem;
+            color: #2d3e50;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px 14px;
+            border: 1px solid #e0e4e8;
+            border-radius: 12px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            transition: 0.2s;
+            background: #fff;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #c49a6c;
+            box-shadow: 0 0 0 2px rgba(196,154,108,0.1);
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 90px;
+        }
+        .submit-btn {
+            background: #c49a6c;
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .submit-btn:hover {
+            background: #a87c4e;
+            transform: translateY(-2px);
+        }
+        .form-footnote {
+            font-size: 0.7rem;
+            color: #7f8c8d;
+            text-align: center;
+            margin-top: 1.2rem;
+        }
+        .form-footnote i {
+            margin-right: 4px;
+        }
+        
+        /* ========== MAP ========== */
+        .contact-map {
+            margin-top: 2.5rem;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+        }
+        .contact-map iframe {
+            width: 100%;
+            height: 280px;
+            border: 0;
+            display: block;
+        }
+        
+        /* ========== CTA ========== */
+        .cta-section {
+            background: #1e2a3a;
+            color: white;
+            padding: 2.5rem 0;
+            text-align: center;
+        }
+        .cta-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+        .cta-section p {
+            font-size: 0.95rem;
+            margin-bottom: 1.2rem;
+        }
+        .btn-primary, .btn-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 0.6rem 1.2rem;
+            border-radius: 40px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+        .btn-primary {
+            background: #c49a6c;
+            color: white;
+            border: none;
+        }
+        .btn-primary:hover {
+            background: #a87c4e;
+        }
+        .btn-outline {
+            border: 1px solid #25D366;
+            color: #25D366;
+            background: transparent;
+        }
+        .btn-outline:hover {
+            background: #25D366;
+            color: white;
+        }
+        
+        /* ========== FOOTER ========== */
+        footer {
+            background: #0f1a24;
+            color: #ccc;
+            padding: 2rem 0 1rem;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        .footer-col h3, .footer-col h4 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        .footer-col h3 span {
+            color: #c49a6c;
+        }
+        .footer-col ul {
+            list-style: none;
+        }
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+        .footer-col ul li a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+        .footer-col ul li a:hover {
+            color: #c49a6c;
+        }
+        
+        /* UPDATED: Footer contact icons with brand colors */
+        .contact-info-footer p {
+            font-size: 0.85rem;
+            margin-bottom: 0.6rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .contact-info-footer p i {
+            width: 24px;
+            text-align: center;
+        }
+        /* Phone, email, location icons -> brand gold */
+        .contact-info-footer p i.fa-phone-alt,
+        .contact-info-footer p i.fa-envelope,
+        .contact-info-footer p i.fa-map-marker-alt {
+            color: #c49a6c;
+        }
+        /* WhatsApp icons in footer -> green */
+        .whatsapp-connect p i.fa-whatsapp {
+            color: #25D366;
+        }
+        /* Regular text links for WhatsApp */
+        .whatsapp-connect a {
+            color: #ddd;
+            text-decoration: none;
+        }
+        .whatsapp-connect a:hover {
+            color: #25D366;
+        }
+        
+        .whatsapp-connect {
+            margin-top: 1rem;
+            padding-top: 0.7rem;
+            border-top: 1px solid rgba(255,255,255,0.15);
+        }
+        .whatsapp-connect p {
+            font-size: 0.8rem;
+            margin: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.75rem;
+        }
+        
+        /* Floating WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25D366;
+            color: #fff;
+            border-radius: 50px;
+            width: 56px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        .whatsapp-float i {
+            font-size: 30px;
+        }
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.05);
+        }
+        
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 992px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .contact-hero h1 {
+                font-size: 2rem;
+            }
+        }
+        @media (max-width: 640px) {
+            .form-row {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+            .contact-section {
+                padding: 2.5rem 0;
+            }
+            .contact-info-card, .form-wrapper {
+                padding: 1.25rem;
+            }
+            .whatsapp-float {
+                width: 48px;
+                height: 48px;
+            }
+            .whatsapp-float i {
+                font-size: 26px;
+            }
+        }
+    </style>
 </head>
 <body>
 
+<!-- Navigation -->
 <nav class="navbar">
     <div class="container nav-container">
-        <img src="Image/logo.svg" alt="logo"width="100" height="100"> 
-        <div class="logo"><h1>GRID FRAME <span>CONSULTANCY</span></h1><p class="owner-tag">Manoj Kumar | Founder</p></div>
+        <img src="Image/logo.svg" alt="Grid Frame Logo" width="100" height="100">
+        <div class="logo">
+            <h1>GRID FRAME <span>CONSULTANCY</span></h1>
+            <p class="owner-tag">Manoj Kumar | Founder</p> 
+        </div>
         <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
         <ul class="nav-menu" id="navMenu">
             <li><a href="index.html">Home</a></li>
@@ -25,43 +458,170 @@
     </div>
 </nav>
 
-<section class="page-header">
+<!-- Hero -->
+<section class="contact-hero">
     <div class="container">
-        <h1>Contact Us</h1>
-        <p>Let's discuss your next project</p>
+        <h1>Let’s Build Together</h1>
+        <p>Have a project in mind? Need expert structural advice? Reach out – we’re here to turn your vision into reality.</p>
     </div>
 </section>
 
-<section class="contact-page">
-    <div class="container contact-wrapper">
-        <div class="contact-details">
-            <h2>Get In Touch</h2>
-            <p><i class="fas fa-user-tie"></i> <strong>Manoj Kumar</strong> (Founder)</p>
-            <p><i class="fas fa-phone-alt"></i> +91 9994520061</p>
-            <p><i class="fas fa-envelope"></i> akarvina@gmail.com</p>
-            <p><i class="fas fa-map-marker-alt"></i> NO.6 Collector Sivakumar Street, KK Pudur, Saibaba colony, Coimbatore-641038</p>
-            <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1x3916.123456789!2d76.9558!3d11.0168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859af2f971cb1%3A0x2f6b2f8c2c0c3c0!2sCoimbatore!5e0!3m2!1sen!2sin!4v1234567890" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+<!-- Contact Section -->
+<section class="contact-section">
+    <div class="container">
+        <div class="contact-grid">
+            <!-- Left info card -->
+            <div class="contact-info-card">
+                <h3>📬 Get in Touch</h3>
+                <div class="info-details">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>NO.6 Collector Sivakumar St, KK Pudur,<br>Saibaba colony, Coimbatore - 641038</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <p><a href="tel:+919994520061">+91 9994520061</a></p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p><a href="mailto:akarvina@gmail.com">akarvina@gmail.com</a></p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <p>Mon – Sat: 9:00 AM – 7:00 PM<br>Sunday: By appointment</p>
+                    </div>
+                </div>
+                <div class="whatsapp-badge">
+                    <p><i class="fab fa-whatsapp"></i> <strong>Quick Connect on WhatsApp</strong></p>
+                    <p><i class="fas fa-comment-dots"></i> <a href="https://wa.me/message/UNPLO75IUG6ID1" target="_blank">Chat with Manoj Kumar →</a></p>
+                    <p><i class="fab fa-whatsapp"></i> <a href="https://whatsapp.com/channel/0029Vb7yCZnDTkK8tWmI1b38" target="_blank">Join our WhatsApp Channel →</a></p>
+                </div>
+                <div style="margin-top: 1.2rem;">
+                    <a href="https://wa.me/message/UNPLO75IUG6ID1" target="_blank" class="btn-outline-wa"><i class="fab fa-whatsapp"></i> Talk to Expert</a>
+                </div>
+            </div>
+
+            <!-- Right side: horizontal form -->
+            <div class="form-wrapper">
+                <h3>📄 Send a Message</h3>
+                <p>Fill the form – we'll respond within 24 hours</p>
+                
+                <form class="custom-contact-form" action="https://formspree.io/f/your-endpoint" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message *</label>
+                        <textarea id="message" name="message" rows="3" required placeholder="Tell us about your project..."></textarea>
+                    </div>
+                    <div style="text-align: center;">
+                        <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Send Message</button>
+                    </div>
+                    <div class="form-footnote">
+                        <i class="fas fa-lock"></i> Your data is secure. We respond promptly.
+                    </div>
+                </form>
             </div>
         </div>
-        <div class="contact-form-page">
-            <h2>Send a Message</h2>
-            <form id="mainContactForm">
-                <input type="text" placeholder="Your Name" id="cname" required>
-                <input type="email" placeholder="Email Address" id="cemail" required>
-                <input type="text" placeholder="Subject">
-                <textarea rows="5" placeholder="Your Message" id="cmessage" required></textarea>
-                <button type="submit" class="btn btn-primary">Send Message <i class="fas fa-paper-plane"></i></button>
-                <p id="contactStatus" style="display:none; color:green; margin-top:10px;"></p>
-            </form>
+
+        <!-- Google Map -->
+        <div class="contact-map">
+            <iframe 
+                src="https://maps.google.com/maps?q=NO.6+Collector+Sivakumar+St+KK+Pudur+Coimbatore&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                title="Office Location"
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
         </div>
     </div>
 </section>
 
-<footer class="footer">
-    <div class="container footer-grid"><div class="footer-col"><h3>GRID FRAME <span>CONSULTANCY</span></h3><p>Manoj Kumar, Founder</p></div><div class="footer-col"><h4>Our Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="projects.html">Projects</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact Us</a></li></ul></div><div class="footer-col"><h4>Contact</h4><p><i class="fas fa-phone-alt"></i> +91 9994520061</p><p><i class="fas fa-map-marker-alt"></i> NO.6 Collector Sivakumar St, KK Pudur, Saibaba colony, Coimbatore-641038</p></div></div>
-    <div class="footer-bottom"><p>&copy; 2026 Grid Frame Consultancy</p></div>
+<!-- CTA -->
+<section class="cta-section">
+    <div class="container">
+        <h2>Ready to discuss your next project?</h2>
+        <p>Residential, commercial or industrial — we bring structural clarity.</p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="tel:+919994520061" class="btn-primary"><i class="fas fa-phone-alt"></i> Call Now</a>
+            <a href="https://wa.me/message/UNPLO75IUG6ID1" target="_blank" class="btn-outline"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer with updated icon colors -->
+<footer>
+    <div class="container footer-grid">
+        <div class="footer-col">
+            <h3>GRID FRAME <span>CONSULTANCY</span></h3>
+            <p>Manoj Kumar, Founder</p>
+            <p>Providing excellence in structural engineering since 2012.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Our Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Our Services</h4>
+            <ul>
+                <li>Residential Design</li>
+                <li>Commercial Design</li>
+                <li>Industrial Projects</li>
+                <li>Structural Audit</li>
+                <li>Interior Design</li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <div class="contact-info-footer">
+                <p><i class="fas fa-phone-alt"></i> +91 9994520061</p>
+                <p><i class="fas fa-envelope"></i> akarvina@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> 
+                    NO.6 Collector Sivakumar St, KK Pudur,<br>
+                    Saibaba colony, Coimbatore - 641038
+                </p>
+            </div>
+            <div class="whatsapp-connect">
+                <p><i class="fab fa-whatsapp"></i> <strong>Business Chat:</strong> <a href="https://wa.me/message/UNPLO75IUG6ID1" target="_blank">Chat with our expert →</a></p>
+                <p><i class="fab fa-whatsapp"></i> <strong>WhatsApp Channel:</strong> <a href="https://whatsapp.com/channel/0029Vb7yCZnDTkK8tWmI1b38" target="_blank">Follow for updates →</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Grid Frame Consultancy. All rights reserved.</p>
+    </div>
 </footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/message/UNPLO75IUG6ID1" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Mobile menu toggle script -->
+<script>
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navMenu = document.getElementById('navMenu');
+    if (mobileToggle && navMenu) {
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    }
+</script>
 <script src="js/script.js"></script>
 </body>
 </html>
