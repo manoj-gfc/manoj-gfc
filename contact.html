@@ -8,89 +8,68 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* ========== BASE & RESET ========== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.5;
-            color: #1e2a3e;
-        }
-        
-        .container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* ========== HERO SECTION ========== */
+        /* Additional styling for contact page consistency and iframe integration */
         .contact-hero {
             background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
-            padding: 3rem 0;
+            padding: 4rem 0;
             text-align: center;
             color: white;
+            position: relative;
         }
         .contact-hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.75rem;
+            font-size: 3rem;
+            margin-bottom: 1rem;
             font-family: 'Playfair Display', serif;
         }
         .contact-hero p {
-            font-size: 1rem;
+            font-size: 1.1rem;
             opacity: 0.9;
             max-width: 600px;
             margin: 0 auto;
         }
-        
-        /* ========== CONTACT SECTION ========== */
         .contact-section {
-            padding: 4rem 0;
+            padding: 5rem 0;
             background: #fefefe;
         }
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 2.5rem;
+            gap: 3rem;
             align-items: start;
         }
-        
-        /* Left card */
         .contact-info-card {
             background: white;
-            border-radius: 24px;
-            box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.08);
-            padding: 1.75rem;
+            border-radius: 28px;
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.08);
+            padding: 2rem;
+            transition: transform 0.2s ease;
         }
         .contact-info-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1.25rem;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
             color: #1e2a3e;
             font-weight: 700;
         }
         .info-details {
-            margin: 1.5rem 0;
+            margin: 1.8rem 0;
         }
         .info-item {
             display: flex;
             align-items: flex-start;
-            gap: 0.85rem;
-            margin-bottom: 1.25rem;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
         }
         .info-item i {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             color: #c49a6c;
-            width: 26px;
-            margin-top: 2px;
+            width: 30px;
+            margin-top: 3px;
         }
         .info-item p, .info-item a {
             margin: 0;
-            font-size: 0.95rem;
+            font-size: 1rem;
             color: #2d3e50;
-            line-height: 1.45;
+            line-height: 1.5;
             text-decoration: none;
         }
         .info-item a:hover {
@@ -100,20 +79,19 @@
         .whatsapp-badge {
             background: #e8f5e9;
             border-radius: 16px;
-            padding: 1rem;
-            margin-top: 1.5rem;
+            padding: 1.2rem;
+            margin-top: 2rem;
             border-left: 4px solid #25D366;
         }
         .whatsapp-badge p {
-            margin: 0.4rem 0;
+            margin: 0.5rem 0;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
             flex-wrap: wrap;
-            font-size: 0.9rem;
         }
         .whatsapp-badge i {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             color: #25D366;
         }
         .whatsapp-badge a {
@@ -124,322 +102,189 @@
         .whatsapp-badge a:hover {
             color: #128C7E;
         }
-        .btn-outline-wa {
-            background: transparent;
-            border: 1px solid #25D366;
-            color: #25D366;
-            padding: 6px 16px;
-            border-radius: 40px;
-            font-weight: 500;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: 0.2s;
-            text-decoration: none;
-            font-size: 0.85rem;
-        }
-        .btn-outline-wa:hover {
-            background: #25D366;
-            color: white;
-        }
-        
-        /* ========== RIGHT SIDE: HORIZONTAL CUSTOM FORM ========== */
         .form-wrapper {
             background: white;
-            border-radius: 24px;
-            box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.08);
-            padding: 1.75rem;
+            border-radius: 28px;
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.08);
+            padding: 2rem;
+            text-align: center;
         }
         .form-wrapper h3 {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             margin-bottom: 0.5rem;
             color: #1e2a3e;
-            text-align: center;
         }
-        .form-wrapper > p {
+        .form-wrapper p {
             color: #5a6e7a;
-            font-size: 0.9rem;
-            text-align: center;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.8rem;
         }
         
-        /* Custom horizontal form styles */
-        .custom-contact-form {
-            width: 100%;
-        }
-        .form-row {
+        /* Enhanced responsive iframe container */
+        .brevo-iframe-container {
             display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            margin-bottom: 1.2rem;
-        }
-        .form-row .form-group {
-            flex: 1;
-            min-width: 140px;
-        }
-        .form-group {
-            margin-bottom: 1.2rem;
-            text-align: left;
-        }
-        .form-group label {
-            display: block;
-            font-size: 0.85rem;
-            font-weight: 500;
-            margin-bottom: 0.4rem;
-            color: #2d3e50;
-        }
-        .form-group input,
-        .form-group textarea {
+            justify-content: center;
+            align-items: center;
             width: 100%;
-            padding: 10px 14px;
-            border: 1px solid #e0e4e8;
-            border-radius: 12px;
-            font-family: 'Inter', sans-serif;
-            font-size: 0.9rem;
-            transition: 0.2s;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
+        
+        .brevo-iframe-container iframe {
+            display: block;
+            width: 100%;
+            height: auto;
+            min-height: 305px;
+            border: none;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.2s;
             background: #fff;
         }
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #c49a6c;
-            box-shadow: 0 0 0 2px rgba(196,154,108,0.1);
-        }
-        .form-group textarea {
-            resize: vertical;
-            min-height: 90px;
-        }
-        .submit-btn {
-            background: #c49a6c;
-            color: white;
-            border: none;
-            padding: 10px 24px;
-            border-radius: 40px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: 0.2s;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .submit-btn:hover {
-            background: #a87c4e;
-            transform: translateY(-2px);
-        }
-        .form-footnote {
-            font-size: 0.7rem;
-            color: #7f8c8d;
-            text-align: center;
-            margin-top: 1.2rem;
-        }
-        .form-footnote i {
-            margin-right: 4px;
+        
+        /* ensure perfect scaling on all devices */
+        @media (max-width: 768px) {
+            .brevo-iframe-container iframe {
+                min-height: 400px;
+            }
         }
         
-        /* ========== MAP ========== */
+        @media (max-width: 540px) {
+            .brevo-iframe-container iframe {
+                min-height: 440px;
+            }
+        }
+        
         .contact-map {
-            margin-top: 2.5rem;
-            border-radius: 24px;
+            margin-top: 3rem;
+            border-radius: 28px;
             overflow: hidden;
-            box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.08);
         }
         .contact-map iframe {
             width: 100%;
-            height: 280px;
+            height: 320px;
             border: 0;
             display: block;
         }
-        
-        /* ========== CTA ========== */
-        .cta-section {
-            background: #1e2a3a;
-            color: white;
-            padding: 2.5rem 0;
-            text-align: center;
-        }
-        .cta-section h2 {
-            font-size: 1.8rem;
-            margin-bottom: 0.5rem;
-        }
-        .cta-section p {
-            font-size: 0.95rem;
-            margin-bottom: 1.2rem;
-        }
-        .btn-primary, .btn-outline {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 0.6rem 1.2rem;
-            border-radius: 40px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: 0.2s;
-        }
-        .btn-primary {
-            background: #c49a6c;
-            color: white;
-            border: none;
-        }
-        .btn-primary:hover {
-            background: #a87c4e;
-        }
-        .btn-outline {
-            border: 1px solid #25D366;
-            color: #25D366;
-            background: transparent;
-        }
-        .btn-outline:hover {
-            background: #25D366;
-            color: white;
-        }
-        
-        /* ========== FOOTER ========== */
-        footer {
-            background: #0f1a24;
-            color: #ccc;
-            padding: 2rem 0 1rem;
-        }
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-        .footer-col h3, .footer-col h4 {
-            color: white;
-            margin-bottom: 1rem;
-        }
-        .footer-col h3 span {
-            color: #c49a6c;
-        }
-        .footer-col ul {
-            list-style: none;
-        }
-        .footer-col ul li {
-            margin-bottom: 0.5rem;
-        }
-        .footer-col ul li a {
-            color: #ccc;
-            text-decoration: none;
-            font-size: 0.85rem;
-        }
-        .footer-col ul li a:hover {
-            color: #c49a6c;
-        }
-        
-        /* UPDATED: Footer contact icons with brand colors */
-        .contact-info-footer p {
-            font-size: 0.85rem;
-            margin-bottom: 0.6rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .contact-info-footer p i {
-            width: 24px;
-            text-align: center;
-        }
-        /* Phone, email, location icons -> brand gold */
-        .contact-info-footer p i.fa-phone-alt,
-        .contact-info-footer p i.fa-envelope,
-        .contact-info-footer p i.fa-map-marker-alt {
-            color: #c49a6c;
-        }
-        /* WhatsApp icons in footer -> green */
-        .whatsapp-connect p i.fa-whatsapp {
-            color: #25D366;
-        }
-        /* Regular text links for WhatsApp */
-        .whatsapp-connect a {
-            color: #ddd;
-            text-decoration: none;
-        }
-        .whatsapp-connect a:hover {
-            color: #25D366;
-        }
-        
-        .whatsapp-connect {
-            margin-top: 1rem;
-            padding-top: 0.7rem;
-            border-top: 1px solid rgba(255,255,255,0.15);
-        }
-        .whatsapp-connect p {
-            font-size: 0.8rem;
-            margin: 0.5rem 0;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-        .footer-bottom {
-            text-align: center;
-            padding-top: 1.5rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            font-size: 0.75rem;
-        }
-        
-        /* Floating WhatsApp */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            background-color: #25D366;
-            color: #fff;
-            border-radius: 50px;
-            width: 56px;
-            height: 56px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            box-shadow: 0 6px 16px rgba(0,0,0,0.2);
-            transition: all 0.3s ease;
-            z-index: 1000;
-        }
-        .whatsapp-float i {
-            font-size: 30px;
-        }
-        .whatsapp-float:hover {
-            background-color: #128C7E;
-            transform: scale(1.05);
-        }
-        
-        /* ========== RESPONSIVE ========== */
         @media (max-width: 992px) {
             .contact-grid {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
             .contact-hero h1 {
-                font-size: 2rem;
+                font-size: 2.4rem;
             }
         }
         @media (max-width: 640px) {
-            .form-row {
-                flex-direction: column;
-                gap: 0.8rem;
-            }
             .contact-section {
-                padding: 2.5rem 0;
+                padding: 3rem 0;
             }
             .contact-info-card, .form-wrapper {
-                padding: 1.25rem;
+                padding: 1.5rem;
             }
+            .info-item {
+                gap: 0.8rem;
+            }
+        }
+        /* floating button and footer consistency */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: #fff;
+            border-radius: 60px;
+            text-align: center;
+            font-size: 28px;
+            z-index: 1000;
+            width: 64px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.08);
+            color: #fff;
+        }
+        .whatsapp-float i {
+            font-size: 36px;
+        }
+        @media (max-width: 768px) {
             .whatsapp-float {
-                width: 48px;
-                height: 48px;
+                width: 52px;
+                height: 52px;
+                bottom: 20px;
+                right: 20px;
             }
             .whatsapp-float i {
-                font-size: 26px;
+                font-size: 28px;
             }
+        }
+        .footer-col .contact-info-footer i {
+            color: #c49a6c !important;
+            margin-right: 8px;
+        }
+        .whatsapp-connect {
+            margin-top: 1.2rem;
+            padding-top: 0.8rem;
+            border-top: 1px solid rgba(255,255,255,0.15);
+        }
+        .whatsapp-connect p {
+            margin: 0.6rem 0;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .whatsapp-connect a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.2s;
+            font-weight: 500;
+        }
+        .whatsapp-connect a:hover {
+            color: #25D366;
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .btn-outline-wa {
+            background: transparent;
+            border: 1px solid #25D366;
+            color: #25D366;
+            padding: 8px 18px;
+            border-radius: 40px;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.2s;
+            text-decoration: none;
+        }
+        .btn-outline-wa:hover {
+            background: #25D366;
+            color: white;
+        }
+        .brevo-iframe-container iframe[src*="sibforms"] {
+            min-width: 200px;
         }
     </style>
 </head>
 <body>
 
-<!-- Navigation -->
+<!-- Navigation (identical to main site, active contact) -->
 <nav class="navbar">
     <div class="container nav-container">
         <img src="Image/logo.svg" alt="Grid Frame Logo" width="100" height="100">
@@ -458,25 +303,28 @@
     </div>
 </nav>
 
-<!-- Hero -->
+<!-- Hero section for contact page -->
 <section class="contact-hero">
     <div class="container">
-        <h1>Let’s Build Together</h1>
-        <p>Have a project in mind? Need expert structural advice? Reach out – we’re here to turn your vision into reality.</p>
+        <h1>Let's Build Together</h1>
+        <p>Have a project in mind? Need expert structural advice? Reach out – we're here to turn your vision into reality.</p>
     </div>
 </section>
 
-<!-- Contact Section -->
+<!-- Main Contact Section with Fully Responsive Brevo Iframe -->
 <section class="contact-section">
     <div class="container">
         <div class="contact-grid">
-            <!-- Left info card -->
+            <!-- Left side: contact information & direct details -->
             <div class="contact-info-card">
                 <h3>📬 Get in Touch</h3>
                 <div class="info-details">
                     <div class="info-item">
                         <i class="fas fa-map-marker-alt"></i>
-                        <p>NO.6 Collector Sivakumar St, KK Pudur,<br>Saibaba colony, Coimbatore - 641038</p>
+                        <p>
+                            NO.6 Collector Sivakumar St, KK Pudur,<br>
+                            Saibaba colony, Coimbatore - 641038
+                        </p>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-phone-alt"></i>
@@ -493,73 +341,62 @@
                 </div>
                 <div class="whatsapp-badge">
                     <p><i class="fab fa-whatsapp"></i> <strong>Quick Connect on WhatsApp</strong></p>
-                    <p><i class="fas fa-comment-dots"></i> <a href="https://wa.me/message/UNPLO75IUG6ID1" target="_blank">Chat with Manoj Kumar →</a></p>
-                    <p><i class="fab fa-whatsapp"></i> <a href="https://whatsapp.com/channel/0029Vb7yCZnDTkK8tWmI1b38" target="_blank">Join our WhatsApp Channel →</a></p>
+                    <p><i class="fas fa-comment-dots"></i> <a href="https://wa.me/message/UNPLO75IUG6ID1" target="_blank" rel="noopener noreferrer">Chat with Manoj Kumar →</a></p>
+                    <p><i class="fab fa-whatsapp"></i> <a href="https://whatsapp.com/channel/0029Vb7yCZnDTkK8tWmI1b38" target="_blank" rel="noopener noreferrer">Join our WhatsApp Channel for insights →</a></p>
                 </div>
-                <div style="margin-top: 1.2rem;">
+                <div style="margin-top: 1.5rem;">
                     <a href="https://wa.me/message/UNPLO75IUG6ID1" target="_blank" class="btn-outline-wa"><i class="fab fa-whatsapp"></i> Talk to Expert</a>
                 </div>
             </div>
 
-            <!-- Right side: horizontal form -->
+            <!-- Right side: Fully responsive Brevo iframe (updated src as requested) -->
             <div class="form-wrapper">
                 <h3>📄 Send a Message</h3>
-                <p>Fill the form – we'll respond within 24 hours</p>
-                
-                <form class="custom-contact-form" action="https://formspree.io/f/your-endpoint" method="POST">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">Full Name *</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number *</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Your Message *</label>
-                        <textarea id="message" name="message" rows="3" required placeholder="Tell us about your project..."></textarea>
-                    </div>
-                    <div style="text-align: center;">
-                        <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Send Message</button>
-                    </div>
-                    <div class="form-footnote">
-                        <i class="fas fa-lock"></i> Your data is secure. We respond promptly.
-                    </div>
-                </form>
+                <p>Fill the form below and we'll get back to you within 24 hours</p>
+                <div class="brevo-iframe-container">
+                    <iframe 
+                        src="https://5359227d.sibforms.com/serve/MUIFAAPODcZQ-DSaqImb9xTwpAS2hreamByz6tuJZ3E1RtE4dZQYKDF2ZKh8XVIZ5Eh2lj5GbiVZW0iR-nsI2bPjXtlU8Mg_4q1kOtIijK0vCSFaune2Jj4yS0KvdLcmLNJ4JLv5SP9ZXzyD_zDx2dAkMlppO2ChpjdC4WH_SVVbnkM1RKOfvsOf0wozx8J1dftWLtv1G9Zvtw20_A==" 
+                        frameborder="0" 
+                        scrolling="auto" 
+                        allowfullscreen
+                        loading="lazy"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        title="Brevo Contact & Consultation Form - Grid Frame Consultancy"
+                        style="display: block; width: 100%; min-height: 305px; border: none; border-radius: 20px; background: transparent;"
+                        sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation-by-user-activation">
+                        Your browser does not support embedded forms. Please use the contact details or WhatsApp.
+                    </iframe>
+                </div>
+                <p style="font-size: 0.8rem; color: #7f8c8d; margin-top: 1rem;"><i class="fas fa-lock"></i> Your data is secure. We respond promptly.</p>
             </div>
         </div>
 
-        <!-- Google Map -->
+        <!-- Google Maps location -->
         <div class="contact-map">
             <iframe 
                 src="https://maps.google.com/maps?q=NO.6+Collector+Sivakumar+St+KK+Pudur+Coimbatore&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-                title="Office Location"
+                title="Grid Frame Consultancy Office Location - Coimbatore"
                 allowfullscreen="" 
-                loading="lazy">
+                loading="lazy"
+                style="border:0; width:100%; height:320px;">
             </iframe>
         </div>
     </div>
 </section>
 
-<!-- CTA -->
-<section class="cta-section">
-    <div class="container">
-        <h2>Ready to discuss your next project?</h2>
-        <p>Residential, commercial or industrial — we bring structural clarity.</p>
+<!-- CTA section -->
+<section class="cta" style="background: #1e2a3a; color: white; padding: 3rem 0;">
+    <div class="container" style="text-align: center;">
+        <h2 style="color: white;">Ready to discuss your next project?</h2>
+        <p style="margin-bottom: 1.5rem;">Whether residential, commercial or industrial — we bring structural clarity.</p>
         <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-            <a href="tel:+919994520061" class="btn-primary"><i class="fas fa-phone-alt"></i> Call Now</a>
-            <a href="https://wa.me/message/UNPLO75IUG6ID1" target="_blank" class="btn-outline"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a href="tel:+919994520061" class="btn btn-primary" style="background: #c49a6c; border: none;"><i class="fas fa-phone-alt"></i> Call Now</a>
+            <a href="https://wa.me/message/UNPLO75IUG6ID1" target="_blank" class="btn btn-outline" style="border-color: #25D366; color: #25D366;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
         </div>
     </div>
 </section>
 
-<!-- Footer with updated icon colors -->
+<!-- Footer -->
 <footer>
     <div class="container footer-grid">
         <div class="footer-col">
@@ -592,35 +429,53 @@
                 <p><i class="fas fa-phone-alt"></i> +91 9994520061</p>
                 <p><i class="fas fa-envelope"></i> akarvina@gmail.com</p>
                 <p><i class="fas fa-map-marker-alt"></i> 
-                    NO.6 Collector Sivakumar St, KK Pudur,<br>
-                    Saibaba colony, Coimbatore - 641038
+                    <span class="address-line">NO.6 Collector Sivakumar St, KK Pudur,</span>
+                    <span class="address-line">Saibaba colony, Coimbatore - 641038</span>
                 </p>
             </div>
             <div class="whatsapp-connect">
-                <p><i class="fab fa-whatsapp"></i> <strong>Business Chat:</strong> <a href="https://wa.me/message/UNPLO75IUG6ID1" target="_blank">Chat with our expert →</a></p>
-                <p><i class="fab fa-whatsapp"></i> <strong>WhatsApp Channel:</strong> <a href="https://whatsapp.com/channel/0029Vb7yCZnDTkK8tWmI1b38" target="_blank">Follow for updates →</a></p>
+                <p><i class="fab fa-whatsapp"></i> <strong>Business Chat:</strong> <a href="https://wa.me/message/UNPLO75IUG6ID1" target="_blank" rel="noopener noreferrer">Chat with our expert →</a></p>
+                <p><i class="fab fa-whatsapp"></i> <strong>WhatsApp Channel:</strong> <a href="https://whatsapp.com/channel/0029Vb7yCZnDTkK8tWmI1b38" target="_blank" rel="noopener noreferrer">Follow for updates & insights →</a></p>
             </div>
         </div>
     </div>
     <div class="footer-bottom">
-        <p>&copy; 2026 Grid Frame Consultancy. All rights reserved.</p>
+        <p>&copy; 2026 Grid Frame Consultancy. All rights reserved. Designed for excellence.</p>
     </div>
 </footer>
 
-<!-- Floating WhatsApp -->
+<!-- Floating WhatsApp Chat Button -->
 <a href="https://wa.me/message/UNPLO75IUG6ID1" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
     <i class="fab fa-whatsapp"></i>
+    <span style="display: none;">Chat</span>
 </a>
 
-<!-- Mobile menu toggle script -->
+<!-- JavaScript for mobile toggle and dynamic iframe height handling -->
 <script>
-    const mobileToggle = document.getElementById('mobileToggle');
-    const navMenu = document.getElementById('navMenu');
-    if (mobileToggle && navMenu) {
-        mobileToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
-    }
+    (function() {
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navMenu = document.getElementById('navMenu');
+        if (mobileToggle && navMenu) {
+            mobileToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+            });
+        }
+        
+        const brevoIframe = document.querySelector('.brevo-iframe-container iframe');
+        if (brevoIframe) {
+            brevoIframe.setAttribute('title', 'Brevo Contact Form - Grid Frame Consultancy');
+            // Listen for height adjustment messages from Brevo iframe (for better responsiveness)
+            window.addEventListener('message', function(e) {
+                if (e.data && typeof e.data === 'object' && e.data.type === 'setHeight') {
+                    const targetIframe = document.querySelector('.brevo-iframe-container iframe');
+                    if (targetIframe && e.data.height) {
+                        targetIframe.style.height = e.data.height + 'px';
+                        targetIframe.style.minHeight = 'auto';
+                    }
+                }
+            });
+        }
+    })();
 </script>
 <script src="js/script.js"></script>
 </body>
