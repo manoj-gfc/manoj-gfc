@@ -661,6 +661,40 @@ footer {
     font-size: 0.95rem;
 }
 
+/* ===== SOCIAL ICON STYLES (Pinterest & Behance) ===== */
+/* Add these classes to your anchor tags for brand colors */
+.social-icon-link {
+    font-size: 32px;
+    margin-right: 15px;
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.social-icon-link .fa-pinterest {
+    color: hsl(130, 14%, 91%);  /* Pinterest Brand Red */
+}
+
+.social-icon-link .fa-behance {
+    color: #e8ece3;  /* Behance Brand Blue */
+}
+
+.social-icon-link:hover .fa-pinterest {
+    color: hwb(120 93% 5%);  /* Darker red on hover */
+}
+
+.social-icon-link:hover .fa-behance {
+    color: #f2f7f0;  /* Darker blue on hover */
+}
+/* Footer Social Icons Hover for Pinterest & Behance */
+.social-icons-footer .social-icon-link:hover .fa-pinterest {
+    color: #0ce651;
+    
+}
+.social-icons-footer .social-icon-link:hover .fa-behance {
+    color: #1769FF;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .mobile-toggle {
@@ -697,6 +731,11 @@ footer {
     }
     .logo img {
         width: 45px;
+    }
+    /* Adjust social icons for mobile if needed */
+    .social-icon-link {
+        font-size: 28px;
+        margin-right: 12px;
     }
 }
 
