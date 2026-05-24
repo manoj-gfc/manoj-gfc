@@ -487,6 +487,7 @@ body {
     font-weight: 500;
 }
 
+
 /* CTA */
 .cta {
     background: linear-gradient(135deg, #0b2b35, #1a4a5a);
@@ -694,7 +695,235 @@ footer {
 .social-icons-footer .social-icon-link:hover .fa-behance {
     color: #1769FF;
 }
+/* ========================================
+   FLOATING PAYHIP SHOPPING BAG ICON & SOCIAL STACK
+   Complete CSS - Floating Action Buttons
+   ======================================== */
 
+/* Base style for all floating action buttons (right side stack) */
+.float-btn {
+    position: fixed;
+    right: 30px;
+    width: 64px;
+    height: 64px;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    z-index: 1000;
+    color: #fff;
+    font-size: 28px;
+}
+
+.float-btn i {
+    font-size: 34px;
+    transition: transform 0.2s;
+}
+
+.float-btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 28px rgba(0,0,0,0.25);
+}
+
+.float-btn:hover i {
+    transform: scale(1.02);
+}
+
+/* Individual button colors & vertical positioning (bottom up) */
+/* Order from bottom to top: WhatsApp Chat (lowest), Instagram, Facebook, LinkedIn, Twitter, Shopping bag (topmost) */
+
+.whatsapp-chat-float {
+    background-color: #25D366;
+    bottom: 30px;
+}
+
+.whatsapp-chat-float:hover {
+    background-color: #128C7E;
+}
+
+.ig-float {
+    background: #E4405F;
+    bottom: 106px;
+}
+
+.ig-float:hover {
+    background: #c1352b;
+}
+
+.fb-float {
+    background-color: #1877f2;
+    bottom: 182px;
+}
+
+.fb-float:hover {
+    background-color: #0e62c9;
+}
+
+.linkedin-float {
+    background-color: #0A66C2;
+    bottom: 258px;
+}
+
+.linkedin-float:hover {
+    background-color: #004182;
+}
+
+.twitter-float {
+    background-color: #1DA1F2;
+    bottom: 334px;
+}
+
+.twitter-float:hover {
+    background-color: #0d8bd9;
+}
+
+/* FLOATING PAYHIP SHOPPING BAG ICON (placed at the top of the stack) */
+.shopping-float {
+    background-color: #118852;
+    bottom: 410px;
+    background: linear-gradient(135deg, #29a943, #25c237);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.3);
+}
+
+.shopping-float i {
+    font-size: 32px;
+}
+
+.shopping-float:hover {
+    background: linear-gradient(135deg, #f4a261, #e76f51);
+    background-color: #f4a261;
+}
+
+/* Responsive adjustments for mobile & tablets */
+@media (max-width: 768px) {
+    .float-btn {
+        width: 52px;
+        height: 52px;
+        right: 20px;
+        font-size: 24px;
+    }
+    .float-btn i {
+        font-size: 26px;
+    }
+    .whatsapp-chat-float {
+        bottom: 20px;
+    }
+    .ig-float {
+        bottom: 84px;
+    }
+    .fb-float {
+        bottom: 148px;
+    }
+    .linkedin-float {
+        bottom: 212px;
+    }
+    .twitter-float {
+        bottom: 276px;
+    }
+    .shopping-float {
+        bottom: 340px;
+    }
+}
+
+/* Tool Grid Layout */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 28px;
+    margin: 32px 0;
+}
+.tool-card {
+    background: #f8fafc;  /* Light slate */
+    border-left: 5px solid #c49a6c;  /* Copper accent */
+}
+
+/* Tool Card Base */
+.tool-card {
+    background: #929494;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-left: 4px solid #4c5b61;
+    overflow: hidden;  
+}
+
+.tool-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 28px rgba(176, 175, 175, 0.12);
+}
+
+/* Inner cards (if any)-
+.tool-card .card,
+.tool-card .converter-card,
+.tool-card .vastu-tool-container {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* Form elements - width overflow தடுக்க */
+.tool-card input,
+.tool-card select,
+.tool-card button {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Result boxes - clean border */
+.result, .result-box {
+    background: #f8f9fa;
+    border-radius: 16px;
+    padding: 16px;
+    margin-top: 16px;
+    border: 1px solid #e2e8f0;
+    font-size: 0.9rem;
+}
+
+/* Buttons inside tool cards */
+.tool-card .tool-btn,
+.tool-card .btn-main,
+.tool-card button[onclick] {
+    display: block;
+    width: 100%;
+    background: hsl(198, 57%, 40%);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 12px;
+    border-radius: 40px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.tool-card .tool-btn:hover,
+.tool-card .btn-main:hover {
+    background: #2a5f76;
+    transform: translateY(-2px);
+}
+
+
+/* For very small devices (max 480px) adjust spacing to avoid overlap */
+@media (max-width: 480px) {
+    .float-btn {
+        width: 48px;
+        height: 48px;
+    }
+    .float-btn i {
+        font-size: 24px;
+    }
+    .whatsapp-chat-float { bottom: 16px; }
+    .ig-float { bottom: 76px; }
+    .fb-float { bottom: 136px; }
+    .linkedin-float { bottom: 196px; }
+    .twitter-float { bottom: 256px; }
+    .shopping-float { bottom: 316px; }
+}
 /* Responsive */
 @media (max-width: 768px) {
     .mobile-toggle {
