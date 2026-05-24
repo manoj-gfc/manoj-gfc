@@ -3,7 +3,39 @@
     padding: 0;
     box-sizing: border-box;
 }
+.button-group {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;   /* மொபைலில் அடுத்த வரிக்கு இறங்க */
+}
+.button-group a {
+  text-decoration: none;
+  padding: 8px 16px;  /* தேவைப்பட்டால் */
+  background-color: #f0f0f0; /* பின்னணி */
+  border-radius: 8px;
+}
+.action-links {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 20px;
+}
 
+.action-links a {
+    font-size: 18px;
+    color: #ffffff;          /* white text */
+    background-color: #ff5722;  /* ADD THIS - orange background */
+    text-decoration: none;
+    padding: 8px 16px;
+    border: none;            /* or keep border if you like */
+    border-radius: 30px;     /* pill shape looks better */
+    transition: 0.3s;
+}
+
+.action-links a:hover {
+    background-color: #e64a19;
+    color: white;
+}
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
@@ -16,6 +48,7 @@ body {
     margin: 0 auto;
     padding: 0 20px;
 }
+
 
 /* Navigation - larger */
 .navbar {
@@ -796,7 +829,17 @@ footer {
     background: linear-gradient(135deg, #f4a261, #e76f51);
     background-color: #f4a261;
 }
-
+ /* responsiveness improvement for social icons */
+        @media (max-width: 560px) {
+            .social-icons-footer {
+                justify-content: center;
+                gap: 0.9rem;
+            }
+            .social-icons-footer .social-icon-link {
+                width: 38px;
+                height: 38px;
+            }
+        }
 /* Responsive adjustments for mobile & tablets */
 @media (max-width: 768px) {
     .float-btn {

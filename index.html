@@ -8,6 +8,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+.button-group {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;   /* மொபைலில் அடுத்த வரிக்கு இறங்க */
+}
+.button-group a {
+  text-decoration: none;
+  padding: 8px 16px;  /* தேவைப்பட்டால் */
+  background-color: #f0f0f0; /* பின்னணி */
+  border-radius: 8px;
+}
+.action-links {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.action-links a {
+    font-size: 18px;
+    color: #ffffff;          /* white text */
+    background-color: #ff5722;  /* ADD THIS - orange background */
+    text-decoration: none;
+    padding: 8px 16px;
+    border: none;            /* or keep border if you like */
+    border-radius: 30px;     /* pill shape looks better */
+    transition: 0.3s;
+}
+
+.action-links a:hover {
+    background-color: #e64a19;
+    color: white;
+}
         /* Additional styling for the video showcase — ensures seamless integration and modern look */
         .video-showcase {
             background: #fafaf9;
@@ -308,6 +341,27 @@
             display: block;
             line-height: 1.5;
         }
+floating-cart {
+  position: fixed;      /* நிலையான இடம் */
+  bottom: 20px;         /* கீழிருந்து 20px */
+  right: 20px;          /* வலதுபுறம் 20px */
+  background-color: #ff5722; /* பின்னணி நிறம் */
+  color: white;         /* ஐகானின் நிறம் */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;   /* வட்ட வடிவம் */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;        /* மற்ற பொருள்களுக்கு மேலே தெரிய */
+  font-size: 24px;
+}
+
+.floating-cart:hover {
+  background-color: #ff0000; /* hover-ல் நிறம் மாற்ற */
+}
+        
         /* responsiveness improvement for social icons */
         @media (max-width: 560px) {
             .social-icons-footer {
@@ -350,7 +404,7 @@
         <span class="hero-badge">Design Your Dream Structure</span>
         <h1>Engineering Excellence <br>With Grid Frame</h1>
         <p>We provide innovative structural consultancy, residential & commercial designs, and project execution with precision.</p>
-        <div class="hero-buttons">
+        <div class="action links">
             <a href="https://www.behance.net/manoj-gfc" class="btn btn-primary" target="_blank">View Our Work <i class="fas fa-arrow-right"></i></a>
             <a href="https://payhip.com/GridFrameDigital" class="btn btn-primary"target="_blank" >Visit Our Store <i class="fas fa-arrow-right"></i> </a>
        <a href="tool.html" class="btn btn-primary"target="_blank" >Use Our Tool <i class="fas fa-arrow-right"></i> </a>
