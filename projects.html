@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Projects | GFC Builder</title>
+   <link rel="canonical" href="https://www.gfcbuilder.com/projects.html">
     <meta name="description" content="View GFC Builder project portfolio featuring residential, commercial and engineering projects with innovative and practical design solutions.">
    
     <meta property="og:title" content="Projects | GFC Builder">
@@ -340,7 +341,467 @@
             padding-top: 1.5rem;
             border-top: 1px solid rgba(255,255,255,0.1);
             margin-top: 1rem;
+        }  /* ========== RESET & BASE ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+       /* ========== HEADER ========== */
+        .header {
+            background: #ffffff;
+            border-bottom: 1px solid #e9edf2;
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        .header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: baseline;
+            gap: 6px;
+        }
+
+        .brand h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #0b2b4a;
+            letter-spacing: -0.5px;
+        }
+
+        .brand .tag {
+            font-size: 13px;
+            font-weight: 500;
+            color: #64748b;
+            background: #f1f5f9;
+            padding: 2px 12px;
+            border-radius: 20px;
+            white-space: nowrap;
+        }
+
+        .brand .founder {
+            font-size: 14px;
+            color: #475569;
+            font-weight: 500;
+            margin-left: 4px;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+
+        .nav a {
+            font-size: 15px;
+            font-weight: 500;
+            color: #475569;
+            transition: color 0.2s;
+            position: relative;
+        }
+
+        .nav a:hover,
+        .nav a.active {
+            color: #0b2b4a;
+        }
+
+        .nav a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 100%;
+            height: 2.5px;
+            background: #0b2b4a;
+            border-radius: 4px;
+        }
+
+        .nav .tool-btn {
+            background: #0b2b4a;
+            color: #fff !important;
+            padding: 8px 20px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: background:0.2s, transform 0.2s;
+        }
+
+        .nav .tool-btn:hover {
+            background: #1a3f5f;
+            transform: translateY(-1px);
+        }
+
+        /* ========== FILTER TABS ========== */
+        .filter-section {
+            padding: 32px 0 20px;
+        }
+
+        .filter-tabs {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .filter-tabs button {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            padding: 8px 28px;
+            border-radius: 40px;
+            font-size: 15px;
+            font-weight: 500;
+            color: #475569;
+            cursor: pointer;
+            transition: all 0.25s;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .filter-tabs button:hover {
+            background: #f1f5f9;
+            border-color: #cbd5e1;
+        }
+
+        .filter-tabs button.active {
+            background: #0b2b4a;
+            color: #ffffff;
+            border-color: #0b2b4a;
+        }
+
+        /* ========== PROJECT GRID ========== */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding: 12px 0 40px;
+        }
+
+        /* ========== PROJECT CARD ========== */
+        .project-card {
+            background: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+            border: 1px solid #edf2f7;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+            /* ✅ FIX 1: Uniform height via flex */
+            height: 100%;
+            min-height: 480px;
+        }
+
+        /* ✅ FIX 5: Hover effect */
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.10);
+            border-color: #d0d9e6;
+        }
+
+        /* ✅ FIX 2: Uniform image sizing */
+        .project-card .card-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+            background: #e9edf2;
+            transition: transform 0.4s ease;
+        }
+
+        .project-card:hover .card-img {
+            transform: scale(1.02);
+        }
+
+        .project-card .card-body {
+            padding: 20px 22px 22px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card .card-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #0b2b4a;
+            margin-bottom: 10px;
+            letter-spacing: -0.3px;
+        }
+
+        /* ✅ FIX 4: Icons + info grid */
+        .card-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px 16px;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #334155;
+        }
+
+        .card-info .info-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .card-info .info-item i {
+            color: #0b2b4a;
+            width: 18px;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .card-info .info-item .label {
+            color: #94a3b8;
+            font-weight: 400;
+            margin-right: 2px;
+        }
+
+        .card-description {
+            font-size: 14px;
+            color: #475569;
+            line-height: 1.6;
+            margin: 6px 0 14px;
+            /* ✅ 2 lines max */
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            flex: 1;
+        }
+
+        /* ✅ FIX 3: Button group */
+        .card-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 4px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            padding: 10px 20px;
+            border-radius: 40px;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+            border: none;
+            cursor: pointer;
+            transition: all 0.25s;
+            flex: 1;
+            min-width: 100px;
+        }
+
+        .btn-primary {
+            background: #0b2b4a;
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background: #1a3f5f;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(11, 43, 74, 0.20);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #0b2b4a;
+            border: 1.5px solid #0b2b4a;
+        }
+
+        .btn-outline:hover {
+            background: #0b2b4a;
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(11, 43, 74, 0.15);
+        }
+
+        .btn i {
+            font-size: 13px;
+        }
+
+        /* ========== SOCIAL ICONS ========== */
+        /* ✅ FIX 6: Proper spacing */
+        .social-section {
+            padding: 20px 0 40px;
+            border-top: 1px solid #e9edf2;
+            margin-top: 8px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .social-section .social-label {
+            font-size: 15px;
+            font-weight: 500;
+            color: #64748b;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 16px;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: #f1f5f9;
+            color: #1e293b;
+            font-size: 18px;
+            transition: all 0.25s;
+        }
+
+        .social-icons a:hover {
+            background: #0b2b4a;
+            color: #ffffff;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 14px rgba(11, 43, 74, 0.20);
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 1024px) {
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header .container {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 10px;
+            }
+
+            .brand {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .brand h1 {
+                font-size: 22px;
+            }
+
+            .nav {
+                justify-content: center;
+                gap: 16px;
+            }
+
+            .nav a {
+                font-size: 14px;
+            }
+
+            .filter-tabs {
+                justify-content: center;
+            }
+
+            .filter-tabs button {
+                padding: 6px 18px;
+                font-size: 14px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .project-card {
+                min-height: 420px;
+            }
+
+            .card-info {
+                grid-template-columns: 1fr 1fr;
+                gap: 4px 12px;
+            }
+
+            .card-actions {
+                flex-direction: column;
+            }
+
+            .btn {
+                flex: 1;
+                width: 100%;
+            }
+
+            .social-section {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .brand .tag {
+                font-size: 11px;
+                padding: 1px 10px;
+            }
+
+            .brand .founder {
+                font-size: 12px;
+            }
+
+            .nav {
+                gap: 10px;
+            }
+
+            .nav a {
+                font-size: 13px;
+            }
+
+            .nav .tool-btn {
+                padding: 6px 14px;
+                font-size: 13px;
+            }
+
+            .project-card .card-img {
+                height: 200px;
+            }
+
+            .project-card .card-body {
+                padding: 16px 16px 18px;
+            }
+
+            .project-card .card-title {
+                font-size: 18px;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -372,33 +833,52 @@
     <div class="container">
         <div class="projects-filter">
             <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="residential">Residential</button>
-            <button class="filter-btn" data-filter="commercial">Commercial</button>
-            <button class="filter-btn" data-filter="industrial">Industrial</button>
+            
         </div>
+
+        
         <div class="projects-grid-full">
-            <div class="project-card" data-category="commercial">
-                <img src="Image/House-1.webp" alt="Commercial Tower">
+            <div class="project-card" data-category="residential">
+                <img src="Image/Residential.webp" alt="Luxury Villa">
                 <div class="project-info">
-                    <h3>Modern Commercial Tower</h3>
-                    <p>Coimbatore | 2025</p>
-                    <p>15-story commercial building with green features.</p>
+                    <h3><span class="info-item"><i class="fas fa-house-chimney"></i> Residential</span></h3> 
+                    <p></p><span class="info-item"><i class="fas fa-location-dot"></i> Coimbatore</span>
+                           <p></p><span class="info-item"><i class="far fa-calendar"></i> 2016</span>
+                             <p></p><span class="info-item"><i class="fas fa-ruler-combined"></i> 5,000 sq.ft</span>
+  <p class="card-description">
+                            Modern villa with swimming pool, landscaped garden, and premium interior finishes.
+                        </p>
+                             
+                   <p></p> <a href="contact.html" class="btn btn-primary" target="_blank">Get Free Quote<i class="fas fa-arrow-right"></i></a>
+        
                 </div>
             </div>
-            <div class="project-card" data-category="residential">
-                <img src="Image/House-2.webp" alt="Luxury Villa">
+            <div class="project-card" data-category="Commercial">
+                <img src="Image/Commercial.webp" alt="Shopping complex">
                 <div class="project-info">
-                    <h3>Luxury Villa</h3>
-                    <p>Saibaba Colony | 2024</p>
-                    <p>5000 sq.ft. modern villa with swimming pool.</p>
+                    <h3> <span class="info-item"><i class="fas fa-building"></i> Commercial</span></h3> 
+                    <p></p><span class="info-item"><i class="fas fa-location-dot"></i> Chennai</span>
+                           <p></p><span class="info-item"><i class="far fa-calendar"></i> 2022</span>
+                             <p></p><span class="info-item"><i class="fas fa-ruler-combined"></i>  1,20,000  sq.ft</span>
+ <p class="card-description">
+                            15-story commercial building with green features, energy-efficient systems, and modern facade.
+                        </p>
+
+                   <p></p> <a href="contact.html" class="btn btn-primary" target="_blank">Get Free Quote<i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="project-card" data-category="industrial">
-                <img src="Image/House-3.webp" alt="Industrial Shed">
+                <img src="Image/Industrial.webp" alt="Industrial Shed">
                 <div class="project-info">
-                    <h3>Industrial Warehouse</h3>
-                    <p>KK Pudur | 2025</p>
-                    <p>Pre-engineered steel structure, 10,000 sq.ft.</p>
+                   <h3><span class="info-item"><i class="fas fa-warehouse"></i> Industrial</span></h3> 
+                    <p></p><span class="info-item"><i class="fas fa-location-dot"></i> Cuddalore</span>
+                           <p></p><span class="info-item"><i class="far fa-calendar"></i> 2024</span>
+                             <p></p><span class="info-item"><i class="fas fa-ruler-combined"></i>  10,000 sq.ft  sq.ft</span>
+ <p class="card-description">
+                            Pre-engineered steel structure with high bay storage, mezzanine floor, and heavy-duty flooring.
+                        </p>
+
+                   <p></p> <a href="contact.html" class="btn btn-primary" target="_blank">Get Free Quote<i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <!-- Only these three projects – no extra project added as requested -->

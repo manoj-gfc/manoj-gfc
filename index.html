@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title> Civil Engineering & Construction Consultancy | GFC Builder</title>
+    <link rel="canonical" href="https://www.gfcbuilder.com/">
     <meta name="description" content="GFC Builder delivers structural design, construction planning, quantity estimation, and sustainable building solutions across India.">
    
 <meta property="og:title" content="Civil Engineering & Construction Consultancy | GFC Builder">
@@ -429,6 +430,221 @@ floating-cart {
 .floating-cart:hover {
   background-color: #ff0000; /* hover-ல் நிறம் மாற்ற */
 }
+/* ---------- HERO SECTION ---------- */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 120px 20px 60px;
+            /* top padding accounts for fixed nav */
+            isolation: isolate;
+            overflow: hidden;
+            background-image: url("Image/banner.webp");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* ----- MODERN GRADIENT OVERLAY (instead of flat dark) ----- */
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            /* Gradient: dark base + brand accent + subtle animated shift */
+            background: linear-gradient(145deg,
+                    rgba(8, 12, 30, 0.80) 0%,
+                    rgba(20, 30, 60, 0.65) 40%,
+                    rgba(40, 50, 80, 0.50) 70%,
+                    rgba(60, 40, 30, 0.40) 100%);
+            /* Animated gradient movement for a "living" feel */
+            background-size: 200% 200%;
+            animation: gradientShift 12s ease-in-out infinite alternate;
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* ----- Subtle grain texture overlay (optional, adds premium feel) ----- */
+        .hero-grain {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            opacity: 0.035;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+            background-repeat: repeat;
+            background-size: 256px 256px;
+            pointer-events: none;
+        }
+
+        /* ----- HERO CONTENT (z-index: 2) ----- */
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 820px;
+            width: 100%;
+        }
+
+        /* Badge – glass‑morphism */
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 0.5rem 2rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #f0e6d0;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            margin-bottom: 1.8rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Heading */
+        .hero-content h1 {
+            font-size: clamp(2.6rem, 8vw, 5rem);
+            font-weight: 800;
+            line-height: 1.08;
+            margin-bottom: 1.2rem;
+            letter-spacing: -0.02em;
+            text-shadow: 0 4px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-content h1 .highlight {
+            background: linear-gradient(135deg, #ffd78a, #f0b86e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-content p {
+            font-size: clamp(1rem, 1.8vw, 1.3rem);
+            max-width: 620px;
+            margin: 0 auto 2.8rem auto;
+            opacity: 0.92;
+            font-weight: 400;
+            line-height: 1.7;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* ----- BUTTONS – glass + modern hover ----- */
+        .action {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem 1.2rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.7rem;
+            padding: 0.85rem 2.4rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            color: #fff;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+            cursor: pointer;
+        }
+
+        .btn i {
+            font-size: 0.85rem;
+            transition: transform 0.35s ease;
+        }
+
+        .btn-primary {
+            background: rgba(255, 255, 255, 0.92);
+            color: #0b132b;
+            border-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-primary:hover {
+            background: #ffffff;
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-primary:hover i {
+            transform: translateX(6px) scale(1.1);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border-color: rgba(255, 255, 255, 0.3);
+            color: #fff;
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.7);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+        }
+
+        .btn-outline:hover i {
+            transform: translateX(6px);
+        }
+
+        /* ---------- STATUS BAR (from your image) ---------- */
+        .status-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 0.4rem 1.8rem;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 1.2rem;
+            font-size: 0.7rem;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.4);
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            letter-spacing: 0.3px;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        .status-bar span {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .status-bar .battery {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .status-bar .battery i {
+            font-size: 0.9rem;
+        }
+
         
         /* responsiveness improvement for social icons */
         @media (max-width: 560px) {
@@ -476,10 +692,12 @@ floating-cart {
         <h1>Engineering Excellence <br>With Grid Frame</h1>
         <p>We provide innovative structural consultancy, residential & commercial designs, and project execution with precision.</p>
         <div class="action links">
-            <a href="https://www.behance.net/gfcbuilder" class="btn btn-primary" target="_blank">View Our Work <i class="fas fa-arrow-right"></i></a>
+            <a href="contact.html" class="btn btn-primary" target="_blank">Get Free Quote<i class="fas fa-arrow-right"></i></a>
             <a href="https://payhip.com/GfcDigital" class="btn btn-primary"target="_blank" >Visit Our Store <i class="fas fa-arrow-right"></i> </a>
-       <a href="tool.html" class="btn btn-primary"target="_blank" >Use Our Tool <i class="fas fa-arrow-right"></i> </a>
-        </div>
+            <a href="https://www.behance.net/gfcbuilder" class="btn btn-primary" target="_blank">View Our Work <i class="fas fa-arrow-right"></i></a>
+      
+    
+    </div>
     </div>
 </section>
 
@@ -491,11 +709,15 @@ floating-cart {
         </div>
         <div class="about-text">
             <span class="section-tag">About Us</span>
-            <h2>We Provide You Best <span>Structural Experience</span></h2>
-            <p>Our signature design and engineering process comes standard – refined, remodelled, new and enjoyable. From concept to completion, we ensure quality and safety.</p>
-            <p>Grid Frame Consultancy, led by Manoj Kumar, has delivered 66+ successful projects across Coimbatore. We blend modern techniques with sustainable practices.</p>
-            <p>GFC Builder is the official brand of Grid Frame Consultancy.</p>
-            <a href="services.html" class="btn-link">Learn More <i class="fas fa-chevron-right"></i></a>
+            <h2>Expert Structural <span>Design & Construction</span></h2>
+            <p>GFC Builder is a professional building construction and consultancy company dedicated to delivering quality, innovation, and customer satisfaction.</p>
+            <p>We specialize in residential and commercial construction, house planning, structural design, renovation, and project consultation. Our goal is to build durable, modern, and cost-effective spaces while maintaining the highest standards of quality and transparency</p>
+            <p>✅ Quality Construction</p>
+            <p>✅ Expert Consultancy</p>
+            <p>✅ Transparent Process</p>
+            <p>✅ Customer Satisfaction</p>
+            <p>✅ On-Time Delivery</p>
+          
             <div class="signature">Manoj Kumar</div>
         </div>
     </div>
@@ -555,24 +777,24 @@ floating-cart {
         </div>
         <div class="projects-preview">
             <div class="project-preview-card">
-                <img src="Image/House-1.webp" alt="Modern Commercial Tower">
-                <div class="overlay">
-                    <h3>Modern Commercial Tower</h3>
-                    <p>Coimbatore | 2025</p>
-                </div>
-            </div>
-            <div class="project-preview-card">
-                <img src="Image/House-2.webp" alt="Luxury Villa">
+                <img src="Image/Residential.webp" alt="Residential">
                 <div class="overlay">
                     <h3>Luxury Villa</h3>
-                    <p>Saibaba Colony | 2024</p>
+                    
                 </div>
             </div>
             <div class="project-preview-card">
-                <img src="Image/House-3.webp" alt="Industrial Warehouse">
+                <img src="Image/Commercial.webp" alt="Luxury Villa">
                 <div class="overlay">
-                    <h3>Industrial Warehouse</h3>
-                    <p>KK Pudur | 2025</p>
+                    <h3>Office Building</h3>
+                   
+                </div>
+            </div>
+            <div class="project-preview-card">
+                <img src="Image/Industrial.webp" alt="Industrial Warehouse">
+                <div class="overlay">
+                    <h3>Manufacturing Unit</h3>
+                   
                 </div>
             </div>
         </div>
