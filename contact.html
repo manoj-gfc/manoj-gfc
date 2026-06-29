@@ -33,17 +33,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://cdn.brevo.com/js/sdk-loader.js" async></script>
-<script>
-    // Version: 2.0
-    window.Brevo = window.Brevo || [];
-    Brevo.push([
-        "init",
-        {
-        client_key: "ix6cffcnfg78tgp3f1e3fjhb",
-        // Optional: Add other initialization options, see documentation
-        }
-    ]);
-</script>
+
     
     <style>
         /* base floating button styles (desktop first) */
@@ -137,6 +127,7 @@
         .twitter-float:hover {
             background-color: #0d8bd9;
         }
+        
 
         /* ========= RESPONSIVE ADJUSTMENTS FOR SOCIAL ICONS / MEDIA ========= */
         @media (max-width: 768px) {
@@ -469,6 +460,8 @@
                 gap: 2rem;
             }
         }
+
+        
         
     </style>
 </head>
@@ -508,7 +501,7 @@
         <div class="contact-grid">
             <!-- Left side: contact information & direct details -->
             <div class="contact-info-card">
-                <h3>📬 Get in Touch</h3>
+                <h3> Get in Touch</h3>
                 <div class="info-details">
                     <div class="info-item">
                         <i class="fas fa-map-marker-alt"></i>
@@ -530,42 +523,55 @@
                         <p>Mon – Sat: 9:00 AM – 6:00 PM<br>Sunday: By appointment</p>
                     </div>
                 </div>
+                
                 <div class="whatsapp-badge">
                     <p><i class="fab fa-whatsapp"></i> <strong>Quick Connect on WhatsApp</strong></p>
                     <p><i class="fas fa-comment-dots"></i> <a href="https://wa.me/message/UNPLO75IUG6ID1" target="_blank" rel="noopener noreferrer">Chat with Manoj Kumar →</a></p>
                     <p><i class="fab fa-whatsapp"></i> <a href="https://whatsapp.com/channel/0029Vb7yCZnDTkK8tWmI1b38" target="_blank" rel="noopener noreferrer">Join our WhatsApp Channel for insights →</a></p>
                 </div>
-                <div style="margin-top: 1.5rem;">
-                    <a href="https://wa.me/message/UNPLO75IUG6ID1" target="_blank" class="btn-outline-wa"><i class="fab fa-whatsapp"></i> Talk to Expert</a>
-                </div>
+                
             </div>
 
-            <!-- Right side: Fully responsive Brevo iframe (updated src as requested) -->
+            <!-- Right side: Fully responsive  (updated src as requested) -->
             <div class="form-wrapper">
-                <h3>📄 Send a Message</h3>
-                <p>Fill the form below and we'll get back to you within 24 hours</p>
-                <div class="brevo-iframe-container">
-                    <iframe 
-                        src="https://310f7449.sibforms.com/v2/serve/MUIFAOfMfIsYc8gD2bK-DX95dfH5Usf70cnZeYCLgie4-6MwRs7BtXNZ4DAQS9MuUHendZiwRatkplh90dgtjKzGnN-jpMr9D5BnAIWJpKGKVAGLqxvqTOsuqee9rxIuWvfGlpPqo4VW-chP4Y6Z3v54gyqLwQTmqNfGprsXKCdUNcxC3PO9UCPixMjHLKqF1QR2D9mLRy_NzguSaA==" 
-                        frameborder="0" 
-                        scrolling="auto" 
-                        allowfullscreen
-                        loading="lazy"
-                        referrerpolicy="strict-origin-when-cross-origin"
-                        title="Brevo Contact & Consultation Form - Grid Frame Consultancy"
-                        style="display: block; width: 100%; min-height: 305px; border: none; border-radius: 20px; background: transparent;"
-                        sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation-by-user-activation">
-                        Your browser does not support embedded forms. Please use the contact details or WhatsApp.
-                    </iframe>
-                </div>
-                <p style="font-size: 0.8rem; color: #7f8c8d; margin-top: 1rem;"><i class="fas fa-lock"></i> Your data is secure. We respond promptly.</p>
+               <div class="container">
+                <p>
+    <h3>Get Free Quote</h3>
+
+  <form action="https://api.web3forms.com/submit" method="POST">
+  <input type="hidden" name="access_key" value="03132777-08a7-4b63-916d-dfde903eb171">
+</p>
+<div class=" form-group">
+    </div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name"  required>
+
+        <label for="email">Email ID</label>
+        <input type="email" id="email" name="email"  required>
+
+        <label for="mobile">Mobile Number</label>
+        <input type="tel" id="mobile" name="mobile"  pattern="[0-9]{10}" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <div class="buttons">
+            <button type="submit" class="submit">Request Quote</button>
+            
+        </div>
+
+    </form>
+</div>
+
             </div>
         </div>
+        </div>
+            </div>
 
         <!-- Google Maps location -->
         <div class="contact-map">
             <iframe 
-                src="https://maps.google.com/maps?q=NO.6+Collector+Sivakumar+St+KK+Pudur+Coimbatore&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                src="https://maps.google.com/maps?q=NO.69+Collector+Sivakumar+St+KK+Pudur+Coimbatore&t=&z=15&ie=UTF8&iwloc=&output=embed" 
                 title="Grid Frame Consultancy Office Location - Coimbatore"
                 allowfullscreen="" 
                 loading="lazy"
@@ -694,20 +700,7 @@
             });
         }
         
-        const brevoIframe = document.querySelector('.brevo-iframe-container iframe');
-        if (brevoIframe) {
-            brevoIframe.setAttribute('title', 'Brevo Contact Form - Grid Frame Consultancy');
-            // Listen for height adjustment messages from Brevo iframe (for better responsiveness)
-            window.addEventListener('message', function(e) {
-                if (e.data && typeof e.data === 'object' && e.data.type === 'setHeight') {
-                    const targetIframe = document.querySelector('.brevo-iframe-container iframe');
-                    if (targetIframe && e.data.height) {
-                        targetIframe.style.height = e.data.height + 'px';
-                        targetIframe.style.minHeight = 'auto';
-                    }
-                }
-            });
-        }
+    
 
         // optional: improve touch feedback for floating icons (no conflicts)
         const allFloats = document.querySelectorAll('.social-float, .whatsapp-float');
