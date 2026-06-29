@@ -761,7 +761,58 @@ button {
     background: #c82333;
 }
 
+@media (max-width: 768px) {
 
+    .form-wrapper {
+        padding: 20px;
+    }
+
+    .form-wrapper h3 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    label {
+        display: block;
+        margin: 12px 0 6px;
+        font-size: 16px;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .buttons {
+        display: block;
+    }
+
+    .buttons button {
+        width: 100%;
+    }
+}
+
+/* ===== Mobile Floating Buttons Fix ===== */
+@media (max-width:768px){
+
+    .float-btn,
+    .social-float,
+    .whatsapp-float{
+        right:12px !important;
+        width:48px !important;
+        height:48px !important;
+    }
+
+    .float-btn i,
+    .social-float i,
+    .whatsapp-float i{
+        font-size:22px !important;
+    }
+
+
+}
 
 
 
@@ -1087,4 +1138,22 @@ button {
 @keyframes fade {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
+}
+/* ===== Mobile Floating Buttons Fix ===== */
+@media (max-width:768px){
+
+    .float-btn,
+    .social-float,
+    .whatsapp-float{
+        right:12px !important;
+        width:48px !important;
+        height:48px !important;
+    }
+
+    .float-btn i,
+    .social-float i,
+    .whatsapp-float i{
+        font-size:22px !important;
+    }
+
 }
