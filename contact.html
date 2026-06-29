@@ -330,29 +330,7 @@
             margin-bottom: 1.8rem;
         }
         
-        /* Brevo iframe container */
-        .brevo-iframe-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            margin: 0 auto;
-            background: #ffffff;
-            border-radius: 20px;
-            overflow: hidden;
-            transition: all 0.2s ease;
-        }
-        .brevo-iframe-container iframe {
-            display: block;
-            width: 100%;
-            height: auto;
-            min-height: 305px;
-            border: none;
-            border-radius: 16px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-            transition: all 0.2s;
-            background: #fff;
-        }
+    
         @media (max-width: 768px) {
             .brevo-iframe-container iframe {
                 min-height: 400px;
@@ -446,9 +424,7 @@
             background: #25D366;
             color: white;
         }
-        .brevo-iframe-container iframe[src*="sibforms"] {
-            min-width: 200px;
-        }
+      
 
         /* additional global mobile improvements for touch targets */
         @media (max-width: 768px) {
@@ -516,7 +492,7 @@
                     </div>
                     <div class="info-item">
                         <i class="fas fa-envelope"></i>
-                        <p><a href="mailto:gfcbuilder666@gmail.com">info@gfcbuilder.com</a></p>
+                        <p><a href="mailto:info@gfcbuilder.com">info@gfcbuilder.com</a></p>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-clock"></i>
@@ -534,39 +510,37 @@
 
             <!-- Right side: Fully responsive  (updated src as requested) -->
             <div class="form-wrapper">
-               <div class="container">
-                <p>
+
     <h3>Get Free Quote</h3>
 
-  <form action="https://api.web3forms.com/submit" method="POST">
-  <input type="hidden" name="access_key" value="03132777-08a7-4b63-916d-dfde903eb171">
-</p>
-<div class=" form-group">
-    </div>
+    <form action="https://api.web3forms.com/submit" method="POST">
+
+        <input type="hidden" name="access_key" value="03132777-08a7-4b63-916d-dfde903eb171">
+        <input type="checkbox" name="botcheck" style="display:none;">
+
         <label for="name">Name</label>
-        <input type="text" id="name" name="name"  required>
+        <input type="text" id="name" name="name" required>
 
         <label for="email">Email ID</label>
-        <input type="email" id="email" name="email"  required>
+        <input type="email" id="email" name="email" required>
 
         <label for="mobile">Mobile Number</label>
-        <input type="tel" id="mobile" name="mobile"  pattern="[0-9]{10}" required>
+        <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required>
 
         <label for="message">Message</label>
         <textarea id="message" name="message" required></textarea>
 
         <div class="buttons">
             <button type="submit" class="submit">Request Quote</button>
-            
         </div>
 
     </form>
+
 </div>
 
-            </div>
+           </div>
         </div>
-        </div>
-            </div>
+         
 
         <!-- Google Maps location -->
         <div class="contact-map">
@@ -587,7 +561,7 @@
         <h2 style="color: white;">Ready to discuss your next project?</h2>
         <p style="margin-bottom: 1.5rem;">Whether residential, commercial or industrial — we bring structural clarity.</p>
         <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-            <a href="tel:+919994520061" class="btn btn-primary" style="background: #c49a6c; border: none;"><i class="fas fa-phone-alt"></i> Call Now</a>
+            <a href="tel:+918300251059" class="btn btn-primary" style="background: #c49a6c; border: none;"><i class="fas fa-phone-alt"></i> Call Now</a>
             <a href="https://wa.me/message/UNPLO75IUG6ID1" target="_blank" class="btn btn-outline" style="border-color: #25D366; color: #25D366;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
         </div>
     </div>
@@ -690,26 +664,28 @@
 
 <!-- JavaScript for mobile toggle and dynamic iframe height handling -->
 <script src="js/script.js"></script>
-<script>
-    (function() {
-        const mobileToggle = document.getElementById('mobileToggle');
-        const navMenu = document.getElementById('navMenu');
-        if (mobileToggle && navMenu) {
-            mobileToggle.addEventListener('click', function() {
-                navMenu.classList.toggle('active');
-            });
-        }
-        
-    
 
-        // optional: improve touch feedback for floating icons (no conflicts)
-        const allFloats = document.querySelectorAll('.social-float, .whatsapp-float');
-        allFloats.forEach(btn => {
-            btn.addEventListener('touchstart', function() {
-                // just passive to enhance response
-            });
+<script>
+(function () {
+    const mobileToggle = document.getElementById("mobileToggle");
+    const navMenu = document.getElementById("navMenu");
+
+    if (mobileToggle && navMenu) {
+        mobileToggle.addEventListener("click", function () {
+            navMenu.classList.toggle("active");
         });
-    })();
-<script src="js/script.js"></script>
+    }
+
+    // Touch feedback for floating buttons
+    const allFloats = document.querySelectorAll(".social-float, .whatsapp-float");
+
+    allFloats.forEach(function (btn) {
+        btn.addEventListener("touchstart", function () {
+            // Optional touch feedback
+        }, { passive: true });
+    });
+})();
+</script>
+
 </body>
 </html>

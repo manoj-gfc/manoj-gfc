@@ -696,65 +696,70 @@ footer {
     font-size: 0.95rem;
 }
 
- input, textarea{
-        width:100%;
-        padding:10px;
-        border:1px solid #ccc;
-        border-radius:5px;
-        outline:none;
-        font-size:15px;
-    }
+.form-group {
+    margin-bottom: 15px;
+}
 
-    input:focus,
-    textarea:focus{
-        border-color:#007BFF;
-    }
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
 
-    textarea{
-        resize:none;
-        height:100px;
-    }
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 15px;
+    box-sizing: border-box;
+    display: block;
+}
 
-    .buttons{
-        display:flex;
-        justify-content:space-between;
-        margin-top:20px;
-    }
+input:focus,
+textarea:focus {
+    border-color: #007BFF;
+}
 
-    button{
-        width:48%;
-        padding:10px;
-        border:none;
-        border-radius:5px;
-        color:#fff;
-        font-size:16px;
-        cursor:pointer;
-    }
+textarea {
+    resize: vertical;   /* Better than resize:none */
+    min-height: 100px;
+}
 
-    .submit{
-        background:#28a745;
-    }
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
 
-    .submit:hover{
-        background:#218838;
-    }
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
 
-    .reset{
-        background:#dc3545;
-    }
+.submit {
+    background: #28a745;
+}
 
-    .reset:hover{
-        background:#c82333;
-    }
+.submit:hover {
+    background: #218838;
+}
 
+.reset {
+    background: #dc3545;
+}
 
-
-
-
-
-
-
-
+.reset:hover {
+    background: #c82333;
+}
 
 
 
