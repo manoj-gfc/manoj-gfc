@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#1e2a3e">
+    <title>Tool | GFC Builder</title>
+    <link rel="canonical" href="https://www.gfcbuilder.com/tool.html">
+    <meta name="description" content="Access useful engineering and construction tools, calculators, resources and technical guides provided by GFC Builder.">
+
+    <meta property="og:title" content="Tool | GFC Builder">
+    <meta property="og:description" content="Access useful engineering and construction tools, calculators, resources and technical guides provided by GFC Builder.">
+    <meta property="og:url" content="https://www.gfcbuilder.com/tool.html">
+    <meta property="og:image" content="https://www.gfcbuilder.com/Image/og-image.webp">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="GFC Builder">
+    <meta property="og:locale" content="en_IN">
+    <meta name="author" content="GFC Builder">
+    <meta name="robots" content="index, follow">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tool | GFC Builder">
+    <meta name="twitter:description" content="Access useful engineering and construction tools, calculators, resources and technical guides provided by GFC Builder.">
+    <meta name="twitter:url" content="https://www.gfcbuilder.com/tool.html">
+    <meta name="twitter:image" content="https://www.gfcbuilder.com/Image/og-image.webp">
+    <meta name="twitter:author" content="GFC Builder">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Engineering Tools | GFC Builder",
+        "url": "https://www.gfcbuilder.com/tool.html",
+        "description": "Free civil engineering and construction tools provided by GFC Builder for engineers, students, and building professionals.",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "GFC Builder",
+            "url": "https://www.gfcbuilder.com/"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Grid Frame Consultancy (GFC Builder)",
+            "url": "https://www.gfcbuilder.com",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.gfcbuilder.com/Image/logo.svg"
+            }
+        }
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/Image/favicon.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/Image/favicon.png?v=2">
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/Image/apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+
+    <!-- External CSS files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tool.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="container nav-container">
+                <img src="Image/logo.svg" alt="Grid Frame Consultancy Logo" width="100" height="100">
+                <div class="logo">
+                    <h1>GRID FRAME CONSULTANCY <span>(GFC BUILDER)</span></h1>
+                    <p class="owner-tag">Manoj Kumar M.E. (Structural) | Founder</p>
+                </div>
+                <button class="mobile-toggle" id="mobileToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-menu" id="navMenu" role="navigation">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="tool.html" class="active" aria-current="page">Tool</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <h1>GRID FRAME · SMART TOOLS</h1>
+        <div class="subhead">Architecture · Construction · Estimation Suite</div>
+
+        <!-- ===== NEW TOOL IDENTITY SECTION ===== -->
+        <div class="tool-identity">
+            <div class="tool-identity-icon">
+                <i class="fas fa-calculator"></i>
+            </div>
+            <h2 class="tool-identity-title">Engineering Tool Suite</h2>
+            <p class="tool-identity-desc">Professional calculators &amp; estimators for architects, engineers &amp; builders</p>
+        </div>
+
+        <div class="tools-grid">
+            <!-- Tool 1: Construction Cost Estimator -->
+            <div class="tool-card">
+                <h3>Construction Cost Estimator</h3>
+                <p class="tool-description">Calculate the approximate total cost and raw material quantities based on area size.</p>
+                <div class="input-group">
+                    <label for="builtUpArea">Total Built-up Area (Sq.Ft):</label>
+                    <input type="number" id="builtUpArea" value="1500" placeholder="e.g., 1500">
+                </div>
+                <div class="input-group">
+                    <label for="constructionQuality">Construction Quality / Type:</label>
+                    <select id="constructionQuality">
+                        <option value="1800">Standard Quality (₹1,800 / Sq.Ft)</option>
+                        <option value="2200">Premium Quality (₹2,200 / Sq.Ft)</option>
+                        <option value="2600">Luxury Quality (₹2,600 / Sq.Ft)</option>
+                    </select>
+                </div>
+                <button id="calcCostBtn" class="tool-btn">Generate Estimate Report</button>
+                <div class="result-box">
+                    <h4>Estimate Summary</h4>
+                    <p><strong>Total Cost:</strong> <span id="resTotalCost">₹ 0</span></p>
+                    <p><strong>Cement:</strong> <span id="resCementQty">0 Bags</span></p>
+                    <p><strong>Steel:</strong> <span id="resSteelQty">0 Tons</span></p>
+                    <p><strong>Sand & M‑Sand:</strong> <span id="resSandQty">0 Brass</span></p>
+                    <p><strong>Aggregate:</strong> <span id="resAggregateQty">0 Brass</span></p>
+                    <p><strong>Bricks:</strong> <span id="resBricksQty">0 Nos</span></p>
+                </div>
+            </div>
+
+            <!-- Tool 2: Area Converter -->
+            <div class="tool-card">
+                <h3>Area Converter</h3>
+                <div class="input-group">
+                    <label for="unitValue">Value</label>
+                    <input type="number" id="unitValue" placeholder="Enter value..." step="any">
+                </div>
+                <div class="input-group">
+                    <label for="fromUnit">From</label>
+                    <select id="fromUnit">
+                        <option value="sqft">Square Feet (sq.ft)</option>
+                        <option value="cent" selected>Cent</option>
+                        <option value="sqm">Square Meters (sq.m)</option>
+                        <option value="acre">Acre</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="toUnit">To</label>
+                    <select id="toUnit">
+                        <option value="sqft" selected>Square Feet (sq.ft)</option>
+                        <option value="cent">Cent</option>
+                        <option value="sqm">Square Meters (sq.m)</option>
+                        <option value="acre">Acre</option>
+                    </select>
+                </div>
+                <button id="convertBtn" class="tool-btn">Convert</button>
+                <div id="unitResult" class="result-box">Result will appear here</div>
+            </div>
+
+            <!-- Tool 3: Home Loan EMI Calculator -->
+            <div class="tool-card">
+                <h3>Home Loan EMI &amp; Eligibility Calculator</h3>
+                <div class="input-group">
+                    <label for="loanAmount">Desired Loan Amount (₹):</label>
+                    <input type="number" id="loanAmount" value="3000000" placeholder="e.g., 3000000">
+                </div>
+                <div class="input-group">
+                    <label for="loanInterest">Interest Rate (%):</label>
+                    <input type="number" id="loanInterest" value="8.5" step="0.1" placeholder="e.g., 8.5">
+                </div>
+                <div class="input-group">
+                    <label for="loanTenure">Tenure (Years):</label>
+                    <input type="number" id="loanTenure" value="20" placeholder="e.g., 20">
+                </div>
+                <div class="input-group">
+                    <label for="monthlyIncome">Your Monthly Net Income (₹):</label>
+                    <input type="number" id="monthlyIncome" value="60000" placeholder="e.g., 60000">
+                </div>
+                <button id="calcLoanBtn" class="tool-btn">Calculate Loan</button>
+                <div class="result-box">
+                    <p><strong>Monthly EMI:</strong> <span id="resLoanEMI">₹ 0</span></p>
+                    <p><strong>Total Interest Payable:</strong> <span id="resTotalInterest">₹ 0</span></p>
+                    <p><strong>Eligibility Status:</strong> <span id="resLoanEligibility">Waiting...</span></p>
+                </div>
+            </div>
+
+            <!-- Tool 4: Vastu Checker -->
+            <div class="tool-card">
+                <h3>Advanced Vastu Checker</h3>
+                <div class="input-group">
+                    <label for="vastu-room">Select Room:</label>
+                    <select id="vastu-room">
+                        <option value="">-- Select Room --</option>
+                        <option value="kitchen">Kitchen</option>
+                        <option value="pooja">Pooja Room</option>
+                        <option value="master_bedroom">Master Bedroom</option>
+                        <option value="toilet">Toilet / Bathroom</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="vastu-direction">Select Facing Direction:</label>
+                    <select id="vastu-direction">
+                        <option value="">-- Select Facing Direction --</option>
+                        <option value="N">North (N)</option>
+                        <option value="NE">Northeast (NE - Ishanya)</option>
+                        <option value="E">East (E)</option>
+                        <option value="SE">Southeast (SE - Agneya)</option>
+                        <option value="S">South (S)</option>
+                        <option value="SW">Southwest (SW - Nairutya)</option>
+                        <option value="W">West (W)</option>
+                        <option value="NW">Northwest (NW - Vayu)</option>
+                    </select>
+                </div>
+                <button id="checkVastuBtn" class="tool-btn">Check Vastu</button>
+                <div id="vastu-output" class="result-box">Select room and direction to check Vastu compliance.</div>
+            </div>
+
+            <!-- Tool 5: Plaster Material Calculator -->
+            <div class="tool-card">
+                <h3>Plaster Material Calculator</h3>
+                <div class="input-group">
+                    <label for="plasterArea">Wall Area (sq.ft)</label>
+                    <input type="number" id="plasterArea" placeholder="e.g., 500">
+                </div>
+                <div class="input-group">
+                    <label for="thickness">Thickness (inches)</label>
+                    <input type="number" id="thickness" placeholder="e.g., 0.5" step="0.1">
+                </div>
+                <button id="calcPlasterBtn" class="tool-btn">Calculate Materials</button>
+                <div id="plasterResult" class="result-box">Enter dimensions to see results.</div>
+            </div>
+
+            <!-- Tool 6: Floor Tiles Calculator -->
+            <div class="tool-card">
+                <h3>Floor Tiles Calculator</h3>
+                <div class="input-group">
+                    <label for="floorArea">Floor Area (sq.ft)</label>
+                    <input type="number" id="floorArea" placeholder="e.g., 400">
+                </div>
+                <div class="input-group">
+                    <label for="tileSize">Tile Size</label>
+                    <select id="tileSize">
+                        <option value="12">12" x 12" (1 sq.ft)</option>
+                        <option value="18">18" x 18" (2.25 sq.ft)</option>
+                        <option value="24">24" x 24" (4 sq.ft)</option>
+                    </select>
+                </div>
+                <button id="calcTileBtn" class="tool-btn">Calculate Tiles</button>
+                <div id="tileResult" class="result-box">Enter area to see results.</div>
+            </div>
+
+            <!-- Tool 7: Paint Quantity Estimator -->
+            <div class="tool-card">
+                <h3>Paint Quantity Estimator</h3>
+                <div class="input-group">
+                    <label for="paintArea">Total Wall Area (sq.ft)</label>
+                    <input type="number" id="paintArea" placeholder="e.g., 800" step="any">
+                </div>
+                <div class="input-group">
+                    <label for="coatCount">Number of Coats</label>
+                    <select id="coatCount">
+                        <option value="1">1 Coat</option>
+                        <option value="2" selected>2 Coats</option>
+                        <option value="3">3 Coats</option>
+                    </select>
+                </div>
+                <button id="calcPaintBtn" class="tool-btn">Calculate Liters</button>
+                <div id="paintResult" class="result-box">Enter area to get an estimate.</div>
+            </div>
+
+            <!-- Tool 8: Construction Progress Checklist -->
+            <div class="tool-card">
+                <h3>Construction Progress Checklist</h3>
+                <label><input type="checkbox" class="checkItem"> Soil testing &amp; site clearing</label>
+                <label><input type="checkbox" class="checkItem"> Foundation laying</label>
+                <label><input type="checkbox" class="checkItem"> Columns &amp; plinth beams</label>
+                <label><input type="checkbox" class="checkItem"> Roof slab casting</label>
+                <label><input type="checkbox" class="checkItem"> Plastering &amp; finishing</label>
+                <label><input type="checkbox" class="checkItem"> Electrical &amp; plumbing rough-in</label>
+                <label><input type="checkbox" class="checkItem"> Flooring, painting &amp; fixtures</label>
+                <button id="saveChecklistBtn" class="tool-btn">Save Progress</button>
+                <div id="checklistMsg" class="result-box"></div>
+            </div>
+
+            <!-- Tool 9: Architectural Prompt Generator -->
+            <div class="tool-card">
+                <h3>Architectural Prompt Generator</h3>
+                <div class="input-group">
+                    <label for="renderStyle">Select architectural style:</label>
+                    <select id="renderStyle">
+                        <option value="Modern Indian Villa, white concrete, wooden louvers, landscape">Modern Exterior Villa</option>
+                        <option value="Luxury Japandi living room, warm textures, minimalist">Japandi Interior</option>
+                        <option value="Neo-classical facade, symmetry, stone cladding">Neo-classical Facade</option>
+                    </select>
+                </div>
+                <button id="generatePromptBtn" class="tool-btn">Generate Prompt</button>
+                <div id="promptContainer" class="result-box" style="display: none;">
+                    <p id="promptDisplay"></p>
+                    <button id="copyPromptBtn" class="copy-btn">Copy Prompt</button>
+                </div>
+            </div>
+
+            <!-- Tool 10: Water Tank Capacity Calculator -->
+            <div class="tool-card">
+                <h3>Water Tank Capacity Calculator</h3>
+                <div class="input-group">
+                    <label for="familyMembers">Number of Family Members:</label>
+                    <input type="number" id="familyMembers" value="4" placeholder="e.g., 4">
+                </div>
+                <div class="input-group">
+                    <label for="tankType">Select Tank Type:</label>
+                    <select id="tankType">
+                        <option value="1">Overhead Tank (1 Day Backup)</option>
+                        <option value="3">Underground Sump (3 Days Backup)</option>
+                    </select>
+                </div>
+                <button id="calcTankBtn" class="tool-btn">Calculate Tank Size</button>
+                <div class="result-box">
+                    <p><strong>Daily Water Required:</strong> <span id="resDailyWater">0 Liters</span></p>
+                    <p><strong>Recommended Tank Capacity:</strong> <span id="resTotalCapacity">0 Liters</span></p>
+                    <p><strong>Suggested Size (L x W x D):</strong> <span id="resTankDimensions">0ft x 0ft x 0ft</span></p>
+                </div>
+            </div>
+
+            <!-- Tool 11: Solar Panel Estimator -->
+            <div class="tool-card">
+                <h3>Solar Panel Roof Space &amp; Savings Estimator</h3>
+                <div class="input-group">
+                    <label for="ebBill">Average Monthly Electricity Bill (₹):</label>
+                    <input type="number" id="ebBill" value="3000" placeholder="e.g., 3000">
+                </div>
+                <button id="calcSolarBtn" class="tool-btn">Estimate Solar Setup</button>
+                <div class="result-box">
+                    <p><strong>Recommended Plant Size:</strong> <span id="resSolarSize">0 kW</span></p>
+                    <p><strong>Required Shadow-Free Roof Space:</strong> <span id="resSolarSpace">0 sq.ft</span></p>
+                    <p><strong>Estimated Annual Savings:</strong> <span id="resSolarSavings">₹ 0</span></p>
+                </div>
+            </div>
+
+            <!-- Tool 12: RCC Material Estimator -->
+            <div class="tool-card">
+                <h3>RCC Material Estimator</h3>
+                <div class="input-group">
+                    <label for="rccArea">RCC Area (sq.ft)</label>
+                    <input type="number" id="rccArea" placeholder="e.g., 1200" step="any">
+                </div>
+                <div class="input-group">
+                    <label for="buildingType">Structure Type</label>
+                    <select id="buildingType">
+                        <option value="residential">Residential (Standard)</option>
+                        <option value="commercial">Commercial (Heavy Load)</option>
+                    </select>
+                </div>
+                <button id="calcRccBtn" class="tool-btn">Calculate Estimate</button>
+                <div id="steelResult" class="result-box">Enter area to get estimates.</div>
+            </div>
+
+            <!-- Tool 13: Weather Check -->
+            <div class="tool-card">
+                <h3>Construction Weather Check</h3>
+                <button id="checkWeatherBtn" class="tool-btn">Is today suitable for work?</button>
+                <div id="weatherResult" class="result-box">Click the button to check your current location weather.</div>
+            </div>
+
+            <!-- Tool 14: Smart Furniture Fit Checker -->
+            <div class="tool-card">
+                <h3>Smart Furniture Fit Checker</h3>
+                <div class="input-group">
+                    <label for="smartRoomLength">Room Length (ft):</label>
+                    <input type="number" id="smartRoomLength" value="12" placeholder="Length">
+                </div>
+                <div class="input-group">
+                    <label for="smartRoomWidth">Room Width (ft):</label>
+                    <input type="number" id="smartRoomWidth" value="10" placeholder="Width">
+                </div>
+                <div class="input-group">
+                    <label for="smartFurnitureType">Select Furniture Item:</label>
+                    <select id="smartFurnitureType">
+                        <option value="42">King Size Bed (6ft x 7ft)</option>
+                        <option value="30">Queen Size Bed (5ft x 6ft)</option>
+                        <option value="15">Standard Wardrobe (3ft x 5ft)</option>
+                        <option value="21">3-Seater Sofa (3ft x 7ft)</option>
+                        <option value="35">L-Shape Sofa Set (5ft x 7ft)</option>
+                        <option value="24">4-Seater Dining Table (4ft x 6ft)</option>
+                        <option value="32">6-Seater Dining Table (4ft x 8ft)</option>
+                    </select>
+                </div>
+                <button id="checkFurnitureBtn" class="tool-btn">Check Room Fit</button>
+                <div class="result-box">
+                    <p><strong>Total Room Area:</strong> <span id="resSmartRoomArea">0 sq.ft</span></p>
+                    <p><strong>Remaining Free Space:</strong> <span id="resSmartFreeSpace">0 sq.ft</span></p>
+                    <p><strong>Room Space Status:</strong> <span id="resSmartVerdict">Waiting...</span></p>
+                </div>
+            </div>
+
+            <!-- Tool 15: Contractor Quote Comparison -->
+            <div class="tool-card">
+                <h3>Contractor Quote Comparison</h3>
+                <div class="input-group">
+                    <label for="totalArea">Total Built-up Area (sq.ft):</label>
+                    <input type="number" id="totalArea" placeholder="1500">
+                </div>
+                <div class="input-group">
+                    <label for="rateA">Contractor A (₹/sq.ft):</label>
+                    <input type="number" id="rateA" placeholder="1950">
+                </div>
+                <div class="input-group">
+                    <label for="rateB">Contractor B (₹/sq.ft):</label>
+                    <input type="number" id="rateB" placeholder="2050">
+                </div>
+                <button id="compareBtn" class="tool-btn">Compare Quotes</button>
+                <div id="compareResult" class="result-box">Enter details to see the cost breakdown.</div>
+            </div>
+        </div>
+
+        <!-- Call To Action -->
+        <section class="cta">
+            <div class="container">
+                <h2>Ready to Build Your Dream?</h2>
+                <p>Contact Grid Frame Consultancy for a free consultation.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary">Send Request <i class="fas fa-paper-plane" aria-hidden="true"></i></a>
+                    <a href="https://whatsapp.com/channel/0029VbCuh5GDp2Q3puckaJ3B" target="_blank" rel="noopener noreferrer" class="btn btn-outline"><i class="fab fa-whatsapp" aria-hidden="true"></i> Join Our Channel</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer - Identical to index.html -->
+        <footer>
+            <div class="container footer-grid">
+                <div class="footer-col">
+                    <h3>GRID FRAME <span>CONSULTANCY</span></h3>
+                    <p>Manoj Kumar M.E. (Structural) , Founder</p>
+                    <p>Providing excellence in structural engineering since 2012.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Our Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="tool.html">Tool</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li>Residential Design</li>
+                        <li>Commercial Design</li>
+                        <li>Industrial Projects</li>
+                        <li>Structural Audit</li>
+                        <li>Interior Design</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <div class="contact-info-footer">
+                        <p><i class="fas fa-phone-alt" aria-hidden="true"></i> +91 8300251059</p>
+                        <p><i class="fas fa-envelope" aria-hidden="true"></i> info@gfcbuilder.com</p>
+                        <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                            <span class="address-line">NO.69 Collector Sivakumar St, </span>
+                            <span class="address-line">KK Pudur, Saibaba colony,</span>
+                            <span class="address-line">Coimbatore - 641038</span>
+                        </p>
+                    </div>
+                    <div class="whatsapp-connect">
+                        <p><i class="fab fa-whatsapp" aria-hidden="true"></i> <strong>Business Chat:</strong> <a href="https://wa.me/message/7YK6SC2M7A24G1" target="_blank" rel="noopener noreferrer">Chat with our expert →</a></p>
+                        <p><i class="fab fa-whatsapp" aria-hidden="true"></i> <strong>WhatsApp Channel:</strong> <a href="https://whatsapp.com/channel/0029VbCuh5GDp2Q3puckaJ3B" target="_blank" rel="noopener noreferrer">Follow for updates & insights →</a></p>
+                    </div>
+
+                    <div class="social-icons-footer">
+                        <span>Connect socially:</span>
+                        <a href="https://www.pinterest.com/gfcbuilder" class="social-icon-link" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Pinterest">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                        <a href="https://www.behance.net/gfcbuilder" class="social-icon-link" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Behance">
+                            <i class="fab fa-behance"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright &copy; <span id="year"></span> Grid Frame Consultancy. All Rights Reserved.</p>
+                <p>
+                    <a href="privacy-policy.html" style="color: #ffffff; text-decoration: none; margin: 0 10px;">Privacy Policy</a> |
+                    <a href="terms-and-conditions.html" style="color: #ffffff; text-decoration: none; margin: 0 10px;">Terms & Conditions</a> |
+                    <a href="refund-policy.html" style="color: #ffffff; text-decoration: none; margin: 0 10px;">Refund Policy</a>
+                </p>
+            </div>
+        </footer>
+
+        <!-- Floating Buttons -->
+        <a href="https://payhip.com/GfcDigital" class="shopping-float social-float" target="_blank" rel="noopener noreferrer" aria-label="Visit our digital store on Payhip">
+            <i class="fas fa-shopping-bag"></i>
+        </a>
+        <a href="https://wa.me/message/7YK6SC2M7A24G1" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+            <span>Chat</span>
+        </a>
+        <a href="https://https://www.facebook.com/share/1KqwS3vsBe/" class="social-float fb-float" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/gfcbuilder/" class="social-float ig-float" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/manoj-kumar-m-e-structural-06b308416/" class="social-float linkedin-float" target="_blank" rel="noopener noreferrer" aria-label="Connect on LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://x.com/GFCBuilder" class="social-float twitter-float" target="_blank" rel="noopener noreferrer" aria-label="Follow us on X (Twitter)">
+            <i class="fab fa-twitter"></i>
+        </a>
+    </div>
+
+    <!-- Core JavaScript -->
+<script src="js/script.js"></script>
+
+<!-- Page-specific JavaScript -->
+<script src="js/pages/tool.js"></script>
+</body>
+</html>

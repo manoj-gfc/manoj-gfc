@@ -1,0 +1,206 @@
+/* ============================================
+   BASE: UTILITIES
+   File: base/utilities.css
+   Purpose: Reusable utility classes
+   ============================================ */
+
+/* ============================================
+   Text Colors
+   ============================================ */
+
+.text-white {
+    color: var(--color-white);
+}
+
+.text-primary {
+    color: var(--color-primary);
+}
+
+.text-accent {
+    color: var(--color-accent);
+}
+
+.text-gray {
+    color: var(--color-gray-500);
+}
+
+/* ============================================
+   Text Sizes
+   ============================================ */
+
+.text-sm {
+    font-size: var(--text-sm);
+}
+
+.text-lg {
+    font-size: var(--text-lg);
+}
+
+.text-xl {
+    font-size: var(--text-xl);
+}
+
+/* ============================================
+   Font Weights
+   ============================================ */
+
+.font-light {
+    font-weight: var(--weight-light);
+}
+
+.font-regular {
+    font-weight: var(--weight-regular);
+}
+
+.font-medium {
+    font-weight: var(--weight-medium);
+}
+
+.font-semibold {
+    font-weight: var(--weight-semibold);
+}
+
+.font-bold {
+    font-weight: var(--weight-bold);
+}
+
+.font-extrabold {
+    font-weight: var(--weight-extrabold);
+}
+
+.font-black {
+    font-weight: var(--weight-black);
+}
+
+/* ============================================
+   Background Colors
+   ============================================ */
+
+.bg-white {
+    background-color: var(--color-white);
+}
+
+.bg-primary {
+    background-color: var(--color-primary);
+}
+
+.bg-accent {
+    background-color: var(--color-accent);
+}
+
+.bg-gray-100 {
+    background-color: var(--color-gray-100);
+}
+
+.bg-gray-200 {
+    background-color: var(--color-gray-200);
+}
+
+/* ============================================
+   Border Utilities
+   ============================================ */
+
+.border {
+    border: 1px solid var(--color-gray-300);
+}
+
+.border-top {
+    border-top: 1px solid var(--color-gray-300);
+}
+
+.border-bottom {
+    border-bottom: 1px solid var(--color-gray-300);
+}
+
+.rounded {
+    border-radius: var(--radius-md);
+}
+
+.rounded-lg {
+    border-radius: var(--radius-lg);
+}
+
+.rounded-xl {
+    border-radius: var(--radius-xl);
+}
+
+.rounded-full {
+    border-radius: var(--radius-full);
+}
+
+/* ============================================
+   Shadow Utilities
+   ============================================ */
+
+.shadow-sm {
+    box-shadow: var(--shadow-sm);
+}
+
+.shadow-md {
+    box-shadow: var(--shadow-md);
+}
+
+.shadow-lg {
+    box-shadow: var(--shadow-lg);
+}
+
+.shadow-xl {
+    box-shadow: var(--shadow-xl);
+}
+
+/* ============================================
+   Accessibility
+   ============================================ */
+
+.visually-hidden,
+.sr-only {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    margin: -1px;
+    padding: 0;
+
+    overflow: hidden;
+
+    clip: rect(0, 0, 0, 0);
+
+    border: 0;
+}
+
+/* ============================================
+   Clearfix
+   ============================================ */
+
+.clearfix::after {
+    content: "";
+
+    display: table;
+    clear: both;
+}
+
+/* ============================================
+   Images
+   ============================================ */
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ============================================
+   Object Fit
+   ============================================ */
+
+.object-cover {
+    object-fit: cover;
+}
+
+.object-contain {
+    object-fit: contain;
+}
+
+.object-center {
+    object-position: center;
+}

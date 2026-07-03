@@ -1,0 +1,164 @@
+/* ============================================
+   BASE: TYPOGRAPHY
+   File: base/typography.css
+   Purpose: Global typography styles
+   ============================================ */
+
+/* ============================================
+   Body
+   ============================================ */
+
+body {
+    font-family: var(--font-primary);
+    font-size: var(--text-base);
+    font-weight: var(--weight-regular);
+    line-height: 1.6;
+
+    color: var(--color-gray-700);
+    background-color: var(--color-white);
+}
+
+/* ============================================
+   Headings
+   ============================================ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-display);
+    font-weight: var(--weight-bold);
+    line-height: 1.2;
+
+    color: var(--color-primary);
+}
+
+h1 {
+    font-size: var(--text-4xl);
+    font-weight: var(--weight-black);
+}
+
+h2 {
+    font-size: var(--text-3xl);
+}
+
+h3 {
+    font-size: var(--text-2xl);
+    font-weight: var(--weight-semibold);
+}
+
+h4 {
+    font-size: var(--text-xl);
+    font-weight: var(--weight-semibold);
+}
+
+h5 {
+    font-size: var(--text-lg);
+    font-weight: var(--weight-semibold);
+}
+
+h6 {
+    font-size: var(--text-base);
+    font-weight: var(--weight-semibold);
+}
+
+/* ============================================
+   Paragraphs
+   ============================================ */
+
+p {
+    margin-bottom: var(--spacing-md);
+
+    color: var(--color-gray-600);
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+/* ============================================
+   Links
+   ============================================ */
+
+a {
+    transition: color var(--transition-fast);
+}
+
+a:hover {
+    color: var(--color-accent);
+}
+
+/* ============================================
+   Lists
+   ============================================ */
+
+ul,
+ol {
+    margin-bottom: var(--spacing-md);
+    padding-left: var(--spacing-xl);
+}
+
+ul li,
+ol li {
+    margin-bottom: var(--spacing-xs);
+}
+
+/* ============================================
+   Blockquotes
+   ============================================ */
+
+blockquote {
+    margin: var(--spacing-xl) 0;
+    padding: var(--spacing-lg) var(--spacing-xl);
+
+    background: var(--color-gray-100);
+
+    border-left: 4px solid var(--color-accent);
+    border-radius: var(--radius-sm);
+}
+
+/* ============================================
+   Code Blocks
+   ============================================ */
+
+code,
+pre {
+    padding: var(--spacing-xs) var(--spacing-sm);
+
+    font-family: "Courier New", monospace;
+    font-size: var(--text-sm);
+
+    background: var(--color-gray-100);
+
+    border-radius: var(--radius-sm);
+}
+
+pre {
+    overflow-x: auto;
+    padding: var(--spacing-md);
+}
+
+/* ============================================
+   Small Text
+   ============================================ */
+
+small {
+    font-size: var(--text-sm);
+    color: var(--color-gray-500);
+}
+
+/* ============================================
+   Text Emphasis
+   ============================================ */
+
+strong,
+b {
+    font-weight: var(--weight-bold);
+}
+
+em,
+i {
+    font-style: italic;
+}

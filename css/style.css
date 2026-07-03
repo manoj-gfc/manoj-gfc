@@ -1,0 +1,63 @@
+/* ============================================
+   main.css - GFC Builder Master Stylesheet
+   ============================================ */
+
+/* ---------- Base System ---------- */
+@import url('base/reset.css');
+@import url('base/variables.css');
+@import url('base/typography.css');
+@import url('base/layout.css');
+@import url('base/utilities.css');
+
+/* ---------- Components ---------- */
+@import url('components/navbar.css');
+@import url('components/footer.css');
+@import url('components/buttons.css');
+@import url('components/cards.css');
+@import url('components/forms.css');
+@import url('components/floating.css');
+@import url('components/animations.css');
+
+/* ---------- Pages ---------- */
+@import url('pages/home.css');
+@import url('pages/services.css');
+@import url('pages/projects.css');
+@import url('pages/blog.css');
+@import url('pages/contact.css');
+@import url('pages/tool.css');
+
+/* ---------- Responsive ---------- */
+@import url('responsive/responsive.css');
+
+/* ---------- Vendors ---------- */
+@import url('vendors/font-awesome.css');
+
+/* ---------- Global Enhancements ---------- */
+
+/* Smooth rendering */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Better text rendering */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Selection color */
+::selection {
+    background: var(--color-accent);
+    color: var(--color-white);
+}
+
+/* Focus accessibility */
+:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+/* Smooth transitions globally (light touch) */
+a, button {
+    transition: all var(--transition-fast);
+}
