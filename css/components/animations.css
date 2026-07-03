@@ -1,0 +1,73 @@
+/* ============================================
+   COMPONENT: ANIMATIONS
+   File: components/animations.css
+   Purpose: Reusable animation keyframes and utility classes
+   ============================================ */
+
+/* ============================================
+   Fade In
+   ============================================ */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease forwards;
+}
+
+/* ============================================
+   Slide In - Left
+   ============================================ */
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.5s ease forwards;
+}
+
+/* ============================================
+   Slide In - Right
+   ============================================ */
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in-right {
+    animation: slideInRight 0.5s ease forwards;
+}
+
+/* ============================================
+   Scale In
+   ============================================ */
+
+@keyframes scaleIn {
+    /* Waiting for complete animation */
+}

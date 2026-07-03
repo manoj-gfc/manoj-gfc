@@ -1,0 +1,56 @@
+/* ============================================
+vendors/font-awesome.css - Third-party CSS
+============================================ */
+
+/*
+   Font Awesome integration file for GFC Builder
+   Recommended approach: use CDN in HTML instead of local file
+*/
+
+/* Example CDN usage (place in HTML <head>):
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+*/
+
+/* Optional overrides for GFC Builder design system */
+
+:root {
+    --fa-style-family-classic: "Font Awesome 6 Free";
+}
+
+/* Icon base consistency */
+i[class^="fa-"],
+i[class*=" fa-"] {
+    line-height: 1;
+    vertical-align: middle;
+}
+
+/* Service icons styling consistency */
+.service-item i,
+.service-card i,
+.tool-card i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Accent icon highlight utility */
+.icon-accent {
+    color: var(--color-accent) !important;
+}
+
+/* Primary icon utility */
+.icon-primary {
+    color: var(--color-primary) !important;
+}
+
+/* Hover animation helper */
+.icon-hover {
+    transition: transform var(--transition-fast), color var(--transition-fast);
+}
+
+.icon-hover:hover {
+    transform: scale(1.15);
+    color: var(--color-accent);
+}
