@@ -1,0 +1,196 @@
+/* ============================================
+   COMPONENT: FLOATING BUTTONS
+   File: components/floating.css
+   Purpose: Floating action and social media buttons
+   ============================================ */
+
+/* ============================================
+   Base Floating Button
+   ============================================ */
+
+.social-float {
+    position: fixed;
+    bottom: var(--spacing-xl);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 56px;
+    height: 56px;
+
+    border: none;
+    border-radius: 50%;
+
+    color: var(--color-white);
+    text-decoration: none;
+    font-size: var(--text-xl);
+
+    cursor: pointer;
+
+    box-shadow: var(--shadow-lg);
+
+    transition:
+        transform var(--transition-normal),
+        box-shadow var(--transition-normal),
+        background-color var(--transition-normal),
+        color var(--transition-normal);
+
+    z-index: var(--z-higher);
+}
+
+.social-float:hover {
+    transform: scale(1.1);
+    color: var(--color-white);
+    box-shadow: var(--shadow-xl);
+}
+
+/* ============================================
+   WhatsApp Floating Button
+   ============================================ */
+
+.whatsapp-float {
+    position: fixed;
+    right: var(--spacing-xl);
+    bottom: var(--spacing-xl);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+
+    background: var(--color-whatsapp);
+    color: var(--color-white);
+
+    text-decoration: none;
+    font-size: var(--text-2xl);
+
+    box-shadow: var(--shadow-lg);
+
+    transition:
+        transform var(--transition-normal),
+        box-shadow var(--transition-normal);
+
+    z-index: var(--z-higher);
+}
+
+.whatsapp-float span {
+    position: absolute;
+    right: 70px;
+
+    display: none;
+
+    padding: var(--spacing-xs) var(--spacing-md);
+
+    white-space: nowrap;
+
+    font-size: var(--text-sm);
+
+    color: var(--color-white);
+    background: var(--color-primary);
+
+    border-radius: var(--radius-md);
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-xl);
+}
+
+.whatsapp-float:hover span {
+    display: block;
+}
+
+/* ============================================
+   Shopping Floating Button
+   ============================================ */
+
+.shopping-float {
+    position: fixed;
+    right: var(--spacing-xl);
+    bottom: calc(var(--spacing-xl) * 2 + 70px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 56px;
+    height: 56px;
+
+    border-radius: 50%;
+
+    background: var(--color-primary);
+    color: var(--color-white);
+
+    text-decoration: none;
+    font-size: var(--text-xl);
+
+    box-shadow: var(--shadow-lg);
+
+    transition:
+        transform var(--transition-normal),
+        box-shadow var(--transition-normal),
+        color var(--transition-normal);
+
+    z-index: var(--z-higher);
+}
+
+.shopping-float:hover {
+    transform: scale(1.1);
+    color: var(--color-white);
+    box-shadow: var(--shadow-xl);
+}
+
+/* ============================================
+   Social Button Variants
+   ============================================ */
+
+.fb-float {
+    right: var(--spacing-xl);
+    bottom: calc(var(--spacing-xl) * 4 + 190px);
+    background: var(--color-facebook);
+}
+
+.ig-float {
+    right: var(--spacing-xl);
+    bottom: calc(var(--spacing-xl) * 3 + 130px);
+    background: var(--color-instagram);
+}
+
+.linkedin-float {
+    right: var(--spacing-xl);
+    bottom: calc(var(--spacing-xl) * 2 + 70px);
+    background: var(--color-linkedin);
+}
+
+.twitter-float {
+    right: var(--spacing-xl);
+    bottom: calc(var(--spacing-xl) + 10px);
+    background: var(--color-twitter);
+}
+
+.pinterest-float {
+    left: var(--spacing-xl);
+    bottom: calc(var(--spacing-xl) * 2 + 70px);
+    background: var(--color-pinterest);
+}
+
+.behance-float {
+    left: var(--spacing-xl);
+    bottom: calc(var(--spacing-xl) + 10px);
+    background: var(--color-behance);
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+
+@media (max-width: 768px) {
+    .social-float {
+        /* Continue with the remaining responsive rules */
+    }
+}

@@ -1,0 +1,115 @@
+/* ============================================
+   pages/services.css - GFC Builder Services Page
+   ============================================ */
+
+/* ---------- Page Header ---------- */
+.page-header {
+    padding: var(--spacing-4xl) 0;
+    background: linear-gradient(rgba(11, 26, 43, 0.92), rgba(30, 42, 62, 0.95)),
+        url("../Image/services-hero.webp") center/cover no-repeat;
+    color: var(--color-white);
+    text-align: center;
+}
+
+.page-header h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    color: var(--color-white);
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.2;
+}
+
+.page-header p {
+    color: var(--color-gray-300);
+    font-size: var(--text-lg);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* ---------- Services Section ---------- */
+.services-full {
+    padding: var(--spacing-4xl) 0;
+    background: var(--color-white);
+}
+
+.services-grid-full {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-xl);
+}
+
+/* ---------- Service Item ---------- */
+.service-item {
+    background: var(--color-gray-100);
+    padding: var(--spacing-2xl);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    border: 1px solid var(--color-gray-200);
+    transition: all var(--transition-normal);
+}
+
+.service-item:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-accent);
+}
+
+.service-item i {
+    font-size: var(--text-4xl);
+    color: var(--color-accent);
+    margin-bottom: var(--spacing-md);
+}
+
+.service-item h3 {
+    font-family: var(--font-primary);
+    font-size: var(--text-xl);
+    font-weight: var(--weight-semibold);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.service-item p {
+    color: var(--color-gray-500);
+    font-size: var(--text-sm);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* ---------- Footer CTA ---------- */
+.footer-cta {
+    background: var(--color-primary-dark);
+    color: var(--color-white);
+    padding: var(--spacing-4xl) 0;
+    text-align: center;
+}
+
+.footer-cta h2 {
+    color: var(--color-white);
+    margin-bottom: var(--spacing-sm);
+    font-family: var(--font-display);
+}
+
+.footer-cta p {
+    color: var(--color-gray-300);
+    margin-bottom: var(--spacing-lg);
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-cta .cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.footer-cta .btn-outline {
+    border-color: var(--color-whatsapp);
+    color: var(--color-whatsapp);
+}
+
+.footer-cta .btn-outline:hover {
+    background: var(--color-whatsapp);
+    color: var(--color-white);
+}

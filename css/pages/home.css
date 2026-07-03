@@ -1,0 +1,397 @@
+/* ============================================
+   pages/home.css - Homepage
+   GFC Builder
+   ============================================ */
+
+/* ============================================
+   Hero Section
+   ============================================ */
+
+.hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+    overflow: hidden;
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("../Image/hero.webp") center/cover no-repeat;
+    opacity: 0.4;
+    z-index: var(--z-base);
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(30, 42, 62, 0.7);
+    z-index: var(--z-low);
+}
+
+.hero-content {
+    position: relative;
+    z-index: var(--z-medium);
+    max-width: 700px;
+    padding: var(--spacing-3xl) 0;
+}
+
+.hero-badge {
+    display: inline-block;
+    margin-bottom: var(--spacing-md);
+    padding: var(--spacing-xs) var(--spacing-md);
+    border-radius: var(--radius-full);
+    background: var(--color-accent);
+    color: var(--color-white);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+    margin-bottom: var(--spacing-lg);
+    font-family: var(--font-display);
+    font-size: var(--text-5xl);
+    font-weight: var(--weight-black);
+    line-height: 1.1;
+    color: var(--color-white);
+}
+
+.hero h1 br {
+    display: block;
+}
+
+.hero p {
+    max-width: 500px;
+    margin-bottom: var(--spacing-xl);
+    font-size: var(--text-lg);
+    color: var(--color-gray-200);
+}
+
+.action-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+}
+
+.action-links .btn-primary {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+.action-links .btn-primary:hover {
+    background: var(--color-accent-dark);
+    border-color: var(--color-accent-dark);
+}
+
+/* ============================================
+   About Section
+   ============================================ */
+
+.about {
+    padding: var(--spacing-4xl) 0;
+    background: var(--color-white);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: var(--spacing-3xl);
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+}
+
+.about-text h2 {
+    margin-bottom: var(--spacing-md);
+    font-family: var(--font-display);
+    font-size: var(--text-3xl);
+    color: var(--color-primary);
+}
+
+.about-text h2 span {
+    color: var(--color-accent);
+}
+
+.about-text p {
+    margin-bottom: var(--spacing-md);
+    color: var(--color-gray-600);
+}
+
+.about-text h3 {
+    margin: var(--spacing-lg) 0 var(--spacing-sm);
+    font-family: var(--font-primary);
+    font-size: var(--text-lg);
+    font-weight: var(--weight-semibold);
+    color: var(--color-primary);
+}
+
+.about-text ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xs);
+    margin: 0 0 var(--spacing-md);
+    padding: 0;
+}
+
+.about-text ul li {
+    margin: 0;
+    padding: 0;
+    font-size: var(--text-sm);
+    color: var(--color-gray-600);
+}
+
+.signature {
+    margin-top: var(--spacing-lg);
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-style: italic;
+    color: var(--color-accent);
+}
+
+/* ============================================
+   Services
+   ============================================ */
+
+.services {
+    padding: var(--spacing-4xl) 0;
+    background: var(--color-gray-100);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+}
+
+/* ============================================
+   Projects
+   ============================================ */
+
+.completed-projects {
+    padding: var(--spacing-4xl) 0;
+    background: var(--color-white);
+}
+
+.projects-preview {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-2xl);
+}
+
+/* ============================================
+   Statistics
+   ============================================ */
+
+.stats {
+    padding: var(--spacing-3xl) 0;
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-xl);
+    text-align: center;
+}
+
+.stat-item h3 {
+    margin-bottom: var(--spacing-xs);
+    font-family: var(--font-display);
+    font-size: var(--text-4xl);
+    font-weight: var(--weight-black);
+    color: var(--color-white);
+}
+
+.stat-item p {
+    margin: 0;
+    font-size: var(--text-base);
+    color: var(--color-gray-300);
+}
+
+/* ============================================
+   Video Showcase
+   ============================================ */
+
+.video-showcase {
+    padding: var(--spacing-4xl) 0;
+    background: var(--color-gray-100);
+}
+
+.video-container {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    border-radius: var(--radius-xl);
+    background: var(--color-primary);
+    box-shadow: var(--shadow-lg);
+}
+
+.video-container video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+}
+
+.video-caption {
+    margin-top: var(--spacing-md);
+    text-align: center;
+    font-size: var(--text-sm);
+    color: var(--color-gray-500);
+}
+
+.video-caption i {
+    margin-right: var(--spacing-xs);
+    color: var(--color-accent);
+}
+
+/* ============================================
+   Testimonials
+   ============================================ */
+
+.testimonials {
+    padding: var(--spacing-4xl) 0;
+    background: var(--color-white);
+}
+
+.testimonial-slider {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    display: none;
+    margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-2xl);
+    border-radius: var(--radius-xl);
+    background: var(--color-gray-100);
+    text-align: center;
+}
+
+.testimonial-card.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+.testimonial-card i.fa-quote-left {
+    margin-bottom: var(--spacing-md);
+    font-size: var(--text-3xl);
+    color: var(--color-accent);
+    opacity: 0.3;
+}
+
+.testimonial-card p {
+    margin-bottom: var(--spacing-md);
+    font-size: var(--text-lg);
+    font-style: italic;
+    color: var(--color-gray-700);
+}
+
+.testimonial-card h4 {
+    margin-bottom: var(--spacing-xs);
+    font-family: var(--font-primary);
+    font-size: var(--text-base);
+    font-weight: var(--weight-semibold);
+    color: var(--color-primary);
+}
+
+.testimonial-card span {
+    font-size: var(--text-sm);
+    color: var(--color-gray-500);
+}
+
+.testimonial-controls {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+}
+
+.testimonial-controls button {
+    width: 48px;
+    height: 48px;
+    border: 2px solid var(--color-gray-300);
+    border-radius: 50%;
+    background: var(--color-white);
+    color: var(--color-primary);
+    font-size: var(--text-base);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.testimonial-controls button:hover {
+    background: var(--color-gray-100);
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+}
+
+/* ============================================
+   Blog Preview
+   ============================================ */
+
+.blog {
+    padding: var(--spacing-4xl) 0;
+    background: var(--color-gray-100);
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+}
+
+/* ============================================
+   Call To Action
+   ============================================ */
+
+.cta {
+    padding: var(--spacing-4xl) 0;
+    background: var(--color-primary);
+    color: var(--color-white);
+    text-align: center;
+}
+
+.cta h2 {
+    margin-bottom: var(--spacing-md);
+    font-family: var(--font-display);
+    font-size: var(--text-3xl);
+    color: var(--color-white);
+}
+
+.cta p {
+    margin-bottom: var(--spacing-xl);
+    font-size: var(--text-lg);
+    color: var(--color-gray-300);
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+}
+
+.cta .btn-outline {
+    border-color: var(--color-whatsapp);
+    color: var(--color-whatsapp);
+}
+
+.cta .btn-outline:hover {
+    background: var(--color-whatsapp);
+    color: var(--color-white);
+}
