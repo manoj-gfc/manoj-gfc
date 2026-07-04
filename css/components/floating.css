@@ -191,41 +191,9 @@
 /* ============================================
    Responsive
    ============================================ */
+
 @media (max-width: 768px) {
- .social-float,
-.whatsapp-float,
-.shopping-float {
-    position: fixed !important;
-    z-index: 99999 !important;
-}
-
-.fb-float {
-    right: 20px !important;
-    bottom: 320px !important;
-}
-
-.ig-float {
-    right: 20px !important;
-    bottom: 250px !important;
-}
-
-.linkedin-float {
-    right: 20px !important;
-    bottom: 180px !important;
-}
-
-.twitter-float {
-    right: 20px !important;
-    bottom: 110px !important;
-}
-
-.shopping-float {
-    right: 20px !important;
-    bottom: 390px !important;
-}
-
-.whatsapp-float {
-    right: 20px !important;
-    bottom: 40px !important;
-}
+    .social-float {
+        /* Continue with the remaining responsive rules */
+    }
 }
