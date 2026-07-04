@@ -185,7 +185,14 @@
     background: var(--color-behance);
 }
 
-.social-float,
+
+
+
+/* ============================================
+   Responsive
+   ============================================ */
+@media (max-width: 768px) {
+ .social-float,
 .whatsapp-float,
 .shopping-float {
     position: fixed !important;
@@ -221,15 +228,4 @@
     right: 20px !important;
     bottom: 40px !important;
 }
-
-
-
-/* ============================================
-   Responsive
-   ============================================ */
-
-@media (max-width: 768px) {
-    .social-float {
-        /* Continue with the remaining responsive rules */
-    }
 }
