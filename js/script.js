@@ -1,5 +1,5 @@
 // ============================================
-// js/main.js - Shared Core Functionality
+// js/script.js - Shared Core Functionality
 // ============================================
 
 document.addEventListener('DOMContentLoaded', () => {
