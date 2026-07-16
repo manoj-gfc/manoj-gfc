@@ -50,22 +50,30 @@
 }
 
 /* ============================================
-   Primary Button
+   Primary Button - Get Free Quote
    ============================================ */
 
 .btn-primary {
-    background: var(--color-accent);
-    color: var(--color-white);
-    border-color: var(--color-accent);
+    background: #D4AF37;
+    border: 2px solid #D4AF37;
+    color: #0B2341;   /* Dark Blue Text */
+}
+
+.btn-primary i {
+    color: #0B2341;   /* Paper Plane Icon */
 }
 
 .btn-primary:hover {
-    background: var(--color-accent-dark);
-    border-color: var(--color-accent-dark);
-    color: var(--color-white);
+    background: #C49B2A;
+    border-color: #C49B2A;
+    color: #0B2341;
 
     transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.35);
+}
+
+.btn-primary:hover i {
+    color: #0B2341;
 }
 
 /* ============================================
@@ -73,17 +81,18 @@
    ============================================ */
 
 .btn-secondary {
-    background: var(--color-primary);
-    color: var(--color-white);
-    border-color: var(--color-primary);
+    background: #25D366;
+    color: #FFFFFF;
+    border: 2px solid #25D366;
 }
 
 .btn-secondary:hover {
-    background: var(--color-primary-light);
-    border-color: var(--color-primary-light);
-    color: var(--color-white);
+    background: #1EBE5D;
+    border-color: #1EBE5D;
+    color: #FFFFFF;
 
     transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
 }
 
 /* ============================================

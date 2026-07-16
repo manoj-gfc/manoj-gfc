@@ -3,13 +3,7 @@
    ============================================ */
 
 /* ---------- Page Header ---------- */
-.page-header {
-    padding: var(--spacing-4xl) 0;
-    background: linear-gradient(rgba(11, 26, 43, 0.92), rgba(30, 42, 62, 0.95)),
-        url("../Image/services-hero.webp") center/cover no-repeat;
-    color: var(--color-white);
-    text-align: center;
-}
+
 
 .page-header h1 {
     font-family: var(--font-display);
@@ -77,39 +71,46 @@
 
 /* ---------- Footer CTA ---------- */
 .footer-cta {
-    background: var(--color-primary-dark);
-    color: var(--color-white);
-    padding: var(--spacing-4xl) 0;
+    padding: 70px 20px;
+    background: linear-gradient(180deg, #071B3A 0%, #0A2348 100%);
     text-align: center;
+    color: #fff;
 }
 
 .footer-cta h2 {
-    color: var(--color-white);
-    margin-bottom: var(--spacing-sm);
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
     font-family: var(--font-display);
 }
 
 .footer-cta p {
-    color: var(--color-gray-300);
-    margin-bottom: var(--spacing-lg);
-    max-width: 650px;
-    margin-left: auto;
-    margin-right: auto;
+    color: rgba(255,255,255,.9);
+    font-size: 1.2rem;
+    margin-bottom: 30px;
 }
 
 .footer-cta .cta-buttons {
     display: flex;
     justify-content: center;
-    gap: var(--spacing-md);
+    gap: 16px;
     flex-wrap: wrap;
 }
 
-.footer-cta .btn-outline {
-    border-color: var(--color-whatsapp);
-    color: var(--color-whatsapp);
+.footer-cta .btn {
+    padding: 14px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
 }
 
-.footer-cta .btn-outline:hover {
-    background: var(--color-whatsapp);
-    color: var(--color-white);
+.footer-cta .btn-primary {
+    background: #d9bf73;
+    color: #fff;
+}
+
+.footer-cta .btn-outline {
+    border: 2px solid #25D366;
+    color: #25D366;
+    background: transparent;
 }

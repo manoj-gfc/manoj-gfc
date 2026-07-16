@@ -10,14 +10,15 @@
        Brand Colors
        ============================================ */
 
-    --color-primary: #1e2a3e;
-    --color-primary-dark: #0b1a2b;
-    --color-primary-light: #2a3a52;
+    /* Brand Colors */
 
-    --color-accent: #c49a6c;
-    --color-accent-light: #d4b08c;
-    --color-accent-dark: #a87d52;
+--color-primary: #0B2343;        /* Main Dark Navy */
+--color-primary-dark: #06162E;   /* Header / Footer */
+--color-primary-light: #153A69;  /* Cards */
 
+--color-accent: #D4AF37;         /* Premium Gold */
+--color-accent-light: #E6C75A;   /* Hover */
+--color-accent-dark: #B8860B;    /* Active */
     /* ============================================
        Neutral Colors
        ============================================ */
