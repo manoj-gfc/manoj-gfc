@@ -94,7 +94,7 @@
         text-align: center;
     }
 
-    .navbar .logo h1 {
+    .navbar .brand-title {
         font-size: var(--text-base);
     }
 

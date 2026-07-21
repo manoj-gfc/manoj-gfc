@@ -94,7 +94,7 @@
     min-width:150px;
 }
 
-.navbar .logo h1{
+.navbar .brand-title{
     margin:0;
 
     font-family:var(--font-display);
@@ -107,16 +107,15 @@
     transition:font-size var(--transition-fast);
 }
 
-.navbar.scrolled .logo h1{
+.navbar.scrolled .brand-title{
     font-size:calc(var(--text-lg) - 2px);
 }
 
-.navbar .logo h1 span{
+.navbar .brand-title span{
     color:var(--color-accent);
-    font-size:var(--text-sm);
-    font-weight:var(--weight-regular);
+    font-size:inherit;
+    font-weight:700;
 }
-
 .owner-tag{
     margin:0;
 
