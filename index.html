@@ -80,7 +80,7 @@
 
     <!-- External CSS files -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
@@ -89,7 +89,7 @@
      
      <header class="site-header">
 
-    <nav class="navbar">
+    <nav class="navbar"aria-label="Main Navigation">
         <div class="container nav-container">
             <a href="./"class="brand-logo" aria-label="GFC Builder Home">
             <img src="Image/logo.svg" alt="GFC Builder Logo" width="100" height="100">
@@ -103,7 +103,8 @@
             <button class="mobile-toggle" id="mobileToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation menu">
                 <i class="fas fa-bars"></i>
             </button>
-            <ul class="nav-menu" id="navMenu" role="navigation">
+           
+    <ul class="nav-menu" id="navMenu">
                 <li><a href="./" class="active" aria-current="page">Home</a></li>
                 <li><a href="services/">Services</a></li>
                 <li><a href="projects/">Projects</a></li>
@@ -306,7 +307,7 @@
             <div class="video-container">
                 <video controls autoplay muted loop playsinline preload="metadata" poster="Image/video-poster.webp" aria-label="Project walkthrough video">
                     <source src="assets/web-video.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
+              Your browser does not support the video tag.
                 </video>
             </div>
             <div class="video-caption">
@@ -316,39 +317,63 @@
     </section>
 
     <!-- Testimonials Section -->
-   <section class="testimonials reveal" aria-label="Client testimonials">
+ <section class="testimonials reveal" aria-labelledby="testimonial-heading">
+    <div class="container">
 
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Testimonials</span>
-                <h2>What They Say About Us</h2>
-            </div>
-            <div class="testimonial-slider">
-                <div class="testimonial-card active" role="tabpanel">
-                    <i class="fas fa-quote-left" aria-hidden="true"></i>
-                    <p>"Grid Frame Consultancy delivered our commercial complex on time with excellent structural quality. Manoj Kumar's team is highly professional."</p>
-                    <h4>– Ramesh S.</h4>
-                    <span>Client</span>
-                </div>
-                <div class="testimonial-card" role="tabpanel">
-                    <i class="fas fa-quote-left" aria-hidden="true"></i>
-                    <p>"They designed our luxury villa with perfect attention to detail. Highly recommend for residential projects."</p>
-                    <h4>– Priya M.</h4>
-                    <span>Homeowner</span>
-                </div>
-                <div class="testimonial-card" role="tabpanel">
-                    <i class="fas fa-quote-left" aria-hidden="true"></i>
-                    <p>"Excellent industrial shed planning and execution. Very satisfied with their service."</p>
-                    <h4>– Kumaravel N.</h4>
-                    <span>Industrialist</span>
-                </div>
-            </div>
-            <div class="testimonial-controls">
-                <button class="prev-testimonial" aria-label="Previous testimonial"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
-                <button class="next-testimonial" aria-label="Next testimonial"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
-            </div>
+        <div class="section-header">
+            <span class="section-tag">Testimonials</span>
+            <h2 id="testimonial-heading">What They Say About Us</h2>
         </div>
-    </section>
+
+        <div class="testimonial-slider" role="region" aria-label="Client Testimonials">
+
+            <article class="testimonial-card active">
+                <i class="fas fa-quote-left" aria-hidden="true"></i>
+
+                <blockquote class="testimonial-text">
+                    "Grid Frame Consultancy delivered our commercial complex on time with excellent structural quality. Manoj Kumar's team is highly professional."
+                </blockquote>
+
+                <p class="client-name">– Ramesh S.</p>
+                <span class="client-role">Client</span>
+            </article>
+
+            <article class="testimonial-card">
+                <i class="fas fa-quote-left" aria-hidden="true"></i>
+
+                <blockquote class="testimonial-text">
+                    "They designed our luxury villa with perfect attention to detail. Highly recommend for residential projects."
+                </blockquote>
+
+                <p class="client-name">– Priya M.</p>
+                <span class="client-role">Homeowner</span>
+            </article>
+
+            <article class="testimonial-card">
+                <i class="fas fa-quote-left" aria-hidden="true"></i>
+
+                <blockquote class="testimonial-text">
+                    "Excellent industrial shed planning and execution. Very satisfied with their service."
+                </blockquote>
+
+                <p class="client-name">– Kumaravel N.</p>
+                <span class="client-role">Industrialist</span>
+            </article>
+
+        </div>
+
+        <div class="testimonial-controls">
+            <button class="prev-testimonial" aria-label="Previous testimonial">
+                <i class="fas fa-chevron-left" aria-hidden="true"></i>
+            </button>
+
+            <button class="next-testimonial" aria-label="Next testimonial">
+                <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            </button>
+        </div>
+
+    </div>
+</section>
 
     <!-- Blog / Insights Section -->
    <section class="blog reveal" aria-label="Blog and insights">
