@@ -175,6 +175,16 @@
     font-weight: 600;
     color: #6B4500; /* Darker brown improves readability */
 }
+/* Improve contrast for white sections */
+
+.about .section-tag,
+.services .section-tag,
+.completed-projects .section-tag,
+.blog .section-tag,
+.video-showcase .section-tag,
+.testimonials .section-tag {
+    color: var(--color-accent-dark);
+}
 
 /* ============================================
    Services
