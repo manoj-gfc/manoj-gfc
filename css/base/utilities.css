@@ -204,3 +204,12 @@
 .object-center {
     object-position: center;
 }
+
+/* ============================================
+   Text Alignment
+   ============================================ */
+
+.text-center {
+    text-align: center;
+    margin-top: 40px;
+}
