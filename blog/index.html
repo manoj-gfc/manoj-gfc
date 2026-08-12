@@ -35,7 +35,7 @@
     <meta property="og:site_name" content="GFC Builder">
     <meta property="og:locale" content="en_IN">
 
-    <meta name="author" content="GFC Builder">
+   <meta name="author" content="Manoj Kumar M.E. (Structural)">
     <meta name="robots" content="index, follow">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Civil Engineering Blog | GFC Builder">
@@ -46,39 +46,90 @@
     <meta name="twitter:author" content="GFC Builder">
 
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@type": "Blog",
-      "name": "GFC Builder Blog",
+      "@type": "WebPage",
+      "@id": "https://www.gfcbuilder.com/blog/#webpage",
       "url": "https://www.gfcbuilder.com/blog/",
-      "description": "Expert articles on structural engineering, construction, sustainable materials, structural audits, and cost-saving tips by GFC Builder.",
+      "name": "Civil Engineering Blog | GFC Builder",
+      "description": "Explore expert civil engineering articles, house construction guides, structural design, RCC, building estimation, BOQ, construction cost, project management, and practical building tips from GFC Builder.",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://www.gfcbuilder.com/#website",
+        "url": "https://www.gfcbuilder.com/",
+        "name": "GFC Builder"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.gfcbuilder.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://www.gfcbuilder.com/blog/"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Blog",
+      "@id": "https://www.gfcbuilder.com/blog/#blog",
+      "url": "https://www.gfcbuilder.com/blog/",
+      "name": "GFC Builder Civil Engineering Blog",
+      "description": "Civil engineering, structural engineering, construction and building insights from GFC Builder.",
       "publisher": {
         "@type": "Organization",
         "name": "Grid Frame Consultancy (GFC Builder)",
+        "url": "https://www.gfcbuilder.com/",
         "logo": {
           "@type": "ImageObject",
           "url": "https://www.gfcbuilder.com/Image/logo.svg"
         }
-      },
-      "blogPost": [
+      }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://www.gfcbuilder.com/blog/#articles",
+      "name": "Latest GFC Builder Articles",
+      "numberOfItems": 4,
+      "itemListElement": [
         {
-          "@type": "BlogPosting",
-          "headline": "Future of Architecture: Sustainable Materials",
-          "url": "https://www.gfcbuilder.com/blog/sustainable-materials/"
+          "@type": "ListItem",
+          "position": 1,
+          "url": "https://www.gfcbuilder.com/blog/house-construction-cost-coimbatore/",
+          "name": "House Construction Cost in Coimbatore"
         },
         {
-          "@type": "BlogPosting",
-          "headline": "Why Structural Audit is Essential for Old Buildings",
-          "url": "https://www.gfcbuilder.com/blog/structural-audit/"
+          "@type": "ListItem",
+          "position": 2,
+          "url": "https://www.gfcbuilder.com/blog/structural-audit/",
+          "name": "Why Structural Audit is Essential for Old Buildings"
         },
         {
-          "@type": "BlogPosting",
-          "headline": "Cost Reduction Tips in Construction",
-          "url": "https://www.gfcbuilder.com/blog/cost-reduction-tips/"
+          "@type": "ListItem",
+          "position": 3,
+          "url": "https://www.gfcbuilder.com/blog/cost-reduction-tips/",
+          "name": "Cost Reduction Tips in Construction"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "url": "https://www.gfcbuilder.com/blog/sustainable-materials/",
+          "name": "Future of Architecture: Sustainable Materials"
         }
       ]
     }
-    </script>
+  ]
+}
+</script>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="../Image/favicon.png">
@@ -91,23 +142,31 @@
 
     <!-- External CSS files -->
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/blog.css">
+ 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <!-- Navigation -->
  <header class="site-header">
 
- <nav class="navbar"aria-label="Main Navigation">
+ <nav class="navbar" aria-label="Main Navigation">
     <div class="container nav-container">
-           <a href="../"class="brand-logo" aria-label="GFC Builder Home">
+           <a href="../" class="brand-logo" aria-label="GFC Builder Home">
             <img src="../Image/logo.svg" alt="Grid Frame Consultancy Logo" width="100" height="100"> 
         </a>
         <div class="logo">
             <div class="brand-title">
     GRID FRAME CONSULTANCY <span>(GFC BUILDER)</span>
 </div><p class="owner-tag">Manoj Kumar M.E. (Structural) | Founder</p></div>
-        <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
+        <button
+    class="mobile-toggle"
+    id="mobileToggle"
+    type="button"
+    aria-label="Open navigation menu"
+    aria-expanded="false"
+    aria-controls="navMenu">
+    <i class="fas fa-bars" aria-hidden="true"></i>
+</button>
         <ul class="nav-menu" id="navMenu">
             <li><a href="../">Home</a></li>
             <li><a href="../services/">Services</a></li>
@@ -127,41 +186,115 @@
 <section class="page-header">
     <div class="container">
         <h1>Blog & Insights</h1>
-        <p>Stay updated with the latest structural engineering trends, construction insights, and industry best practices.</p>
+        <p>
+            Stay updated with the latest structural engineering trends,
+            construction insights, and industry best practices.
+        </p>
     </div>
 </section>
 
+
 <section class="blog-full reveal">
     <div class="container">
+
+        <!-- Blog Section Heading -->
+        <h2>Latest Articles</h2>
+
         <div class="blog-grid-full">
-            <!-- Blog Post 1 - Sustainable Materials -->
-            <div class="blog-post">
-                <img src="../Image/Blog-1.webp" width="1200" height="630" alt="Sustainable materials in modern architecture">
-                <h3>Future of Architecture: Sustainable Materials</h3>
-                <p>Discover how eco-friendly materials are changing the construction industry.</p>
-                <a href="../blog/sustainable-materials/">Read More →</a>
-            </div>
-            <!-- Blog Post 2 - Structural Audit -->
-            <div class="blog-post">
-                <img src="../Image/Blog-2.webp" width="1200" height="630" alt="Structural audit for old buildings">
+
+            <!-- Blog Post 1 -->
+            <article class="blog-post">
+                <img
+                    src="../Image/Blog-1.webp"
+                    width="1200"
+                    height="630"
+                    alt="House Construction Cost in Coimbatore"
+                    loading="lazy"
+                    decoding="async"
+                >
+
+                <h3>House Construction Cost in Coimbatore</h3>
+
+                <p>
+                    Complete guide to construction cost, material prices
+                    and budgeting.
+                </p>
+
+                <a href="../blog/house-construction-cost-coimbatore/">
+                    Read More →
+                </a>
+            </article>
+
+
+            <!-- Blog Post 2 -->
+            <article class="blog-post">
+                <img
+                    src="../Image/Blog-2.webp"
+                    width="1200"
+                    height="630"
+                    alt="Structural audit for old buildings"
+                    loading="lazy"
+                    decoding="async"
+                >
+
                 <h3>Why Structural Audit is Essential for Old Buildings</h3>
-                <p>Learn the importance of regular structural audits for safety.</p>
-                <a href="../blog/structural-audit/">Read More →</a>
-            </div>
-            <!-- Blog Post 3 - Cost Reduction -->
-            <div class="blog-post">
-                <img src="../Image/Blog-3.webp" width="1200" height="630" alt="Construction cost reduction tips">
+
+                <p>
+                    Learn the importance of regular structural audits
+                    for safety.
+                </p>
+
+                <a href="../blog/structural-audit/">
+                    Read More →
+                </a>
+            </article>
+
+
+            <!-- Blog Post 3 -->
+            <article class="blog-post">
+                <img
+                    src="../Image/Blog-3.webp"
+                    width="1200"
+                    height="630"
+                    alt="Construction cost reduction tips"
+                    loading="lazy"
+                    decoding="async"
+                >
+
                 <h3>Cost Reduction Tips in Construction</h3>
-                <p>Practical ways to save money without compromising quality.</p>
-                <a href="../blog/cost-reduction-tips/">Read More →</a>
-            </div>
- <!-- Blog Post 4 - house-construction-cost-coimbatore -->
-            <div class="blog-post">
-   <img src="../Image/Blog-4.webp" alt="House Construction Cost in Coimbatore">
-   <h3>House Construction Cost in Coimbatore</h3>
-   <p>Complete guide to construction cost, material prices and budgeting.</p>
-   <a href="../blog/house-construction-cost-coimbatore/">Read More →</a>
-</div>
+
+                <p>
+                    Practical ways to save money without compromising quality.
+                </p>
+
+                <a href="../blog/cost-reduction-tips/">
+                    Read More →
+                </a>
+            </article>
+
+
+            <!-- Blog Post 4 -->
+            <article class="blog-post">
+                <img
+                    src="../Image/Blog-4.webp"
+                    width="1200"
+                    height="630"
+                    alt="Sustainable materials in modern architecture"
+                    loading="lazy"
+                    decoding="async"
+                >
+
+                <h3>Future of Architecture: Sustainable Materials</h3>
+
+                <p>
+                    Discover how eco-friendly materials are changing
+                    the construction industry.
+                </p>
+
+                <a href="../blog/sustainable-materials/">
+                    Read More →
+                </a>
+            </article>
 
         </div>
     </div>
@@ -217,12 +350,13 @@
         <div class="footer-col">
             <h4>Our Services</h4>
             <ul>
-                <li>Residential Design</li>
-                <li>Commercial Design</li>
-                <li>Industrial Projects</li>
-                <li>Structural Audit</li>
-                <li>Interior Design</li>
-            </ul>
+    <li>Residential Design</li>
+    <li>Commercial Design</li>
+    <li>Corporate Towers</li>
+    <li>Hospitality Design</li>
+    <li>Restaurant Design</li>
+    <li>Industrial Design</li>
+</ul>
         </div>
         <div class="footer-col">
             <div class="contact-info-footer">

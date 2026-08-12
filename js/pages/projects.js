@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 projectCards.forEach(card => {
                     if (filter === 'all' || card.getAttribute('data-category') === filter) {
-                        card.style.display = 'block';
+                       card.style.display = '';
                         // Add fade-in animation
                         card.style.animation = 'fadeIn 0.4s ease';
                     } else {

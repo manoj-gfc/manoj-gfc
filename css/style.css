@@ -26,6 +26,7 @@
 @import url('pages/blog.css');
 @import url('pages/contact.css');
 @import url('pages/tools.css');
+@import url('pages/case-study.css');
 
 /* ---------- Responsive ---------- */
 @import url('responsive/responsive.css');

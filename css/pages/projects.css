@@ -1,31 +1,36 @@
 /* ============================================
    pages/projects.css - Projects Page
    GFC Builder
-   ============================================ */
-
-   /* ============================================
-   Projects Page Header
 ============================================ */
 
 
+/* ============================================
+   Projects Page Header
+============================================ */
+
+.page-header {
+    text-align: center;
+}
 
 
 /* ============================================
    Projects Gallery
-   ============================================ */
+============================================ */
 
 .projects-gallery {
     padding: var(--spacing-4xl) 0;
     background: var(--color-white);
 }
 
+
 /* ============================================
    Project Filters
-   ============================================ */
+============================================ */
 
 .projects-filter {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     gap: var(--spacing-md);
     margin-bottom: var(--spacing-2xl);
@@ -33,13 +38,18 @@
 
 .filter-btn {
     padding: var(--spacing-sm) var(--spacing-xl);
+
     border: 2px solid var(--color-gray-300);
     border-radius: var(--radius-full);
+
     background: var(--color-white);
     color: var(--color-gray-600);
+
     font-size: var(--text-sm);
     font-weight: var(--weight-medium);
+
     cursor: pointer;
+
     transition:
         background var(--transition-fast),
         border-color var(--transition-fast),
@@ -58,25 +68,38 @@
     color: var(--color-white);
 }
 
+
 /* ============================================
    Projects Grid
-   ============================================ */
+============================================ */
 
 .projects-grid-full {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
     gap: var(--spacing-lg);
+
+    align-items: stretch;
 }
+
 
 /* ============================================
    Project Card
-   ============================================ */
+============================================ */
 
 .project-card {
+    display: flex;
+    flex-direction: column;
+
     overflow: hidden;
-    border-radius: var(--radius-lg);
+
+    border-radius: 20px;
+
     background: var(--color-white);
+
     box-shadow: var(--shadow-sm);
+
     transition:
         transform var(--transition-normal),
         box-shadow var(--transition-normal);
@@ -87,61 +110,362 @@
     box-shadow: var(--shadow-lg);
 }
 
-.project-card img {
+
+/* ============================================
+   Project Image
+   ORIGINAL IMAGE: 1200 × 630
+============================================ */
+
+.project-card > img {
+    display: block;
+
     width: 100%;
-    height: 250px;
-    object-fit: contain;
+    height: auto;
+
+    aspect-ratio: 1200 / 630;
+
+    object-fit: cover;
+    object-position: center center;
+
     background-color: #f4f4f4;
+
+    border-radius: 20px 20px 0 0;
 }
+
 
 /* ============================================
    Project Content
-   ============================================ */
+============================================ */
 
 .project-info {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+
     padding: var(--spacing-lg);
 }
 
+
+/* ============================================
+   Project Title
+============================================ */
+
 .project-info h3 {
-    margin-bottom: var(--spacing-sm);
+    margin: 0 0 var(--spacing-md);
+
     font-family: var(--font-primary);
+
     font-size: var(--text-xl);
     font-weight: var(--weight-semibold);
+
     color: var(--color-primary);
 }
 
+
+/* ============================================
+   Project Information Items
+============================================ */
+
 .project-info .info-item {
-    display: inline-block;
-    margin-right: var(--spacing-md);
-    margin-bottom: var(--spacing-xs);
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: var(--spacing-sm);
+
     font-size: var(--text-sm);
+
+    line-height: 1.5;
+
     color: var(--color-gray-500);
 }
 
+
+/* ============================================
+   Project Icons
+============================================ */
+
 .project-info .info-item i {
-    width: 18px;
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 22px;
+    min-width: 22px;
+
+    font-size: 18px;
+
+    text-align: center;
+
     color: var(--color-accent);
 }
 
+
+/* ============================================
+   Project Information Paragraphs
+============================================ */
+
+.project-info > p:not(.card-description) {
+    margin: 0;
+}
+
+
+/* ============================================
+   Card Description
+============================================ */
+
 .card-description {
     margin: var(--spacing-md) 0;
+
     font-size: var(--text-sm);
+
+    line-height: 1.7;
+
     color: var(--color-gray-600);
 }
 
+
 /* ============================================
    Project Button
-   ============================================ */
+============================================ */
 
 .project-info .btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    align-self: flex-start;
+
+    gap: 8px;
+
+    margin-top: auto;
+
     padding: var(--spacing-xs) var(--spacing-lg);
+
     border: none;
+    border-radius: var(--radius-full);
+
     background: var(--color-accent);
     color: var(--color-white);
+
     font-size: var(--text-sm);
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        background var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.project-info .btn i {
+    font-size: 14px;
 }
 
 .project-info .btn:hover {
     background: var(--color-accent-dark);
     transform: translateY(-2px);
+}
+
+
+/* ============================================
+   Tablet Responsive
+============================================ */
+
+@media (max-width: 992px) {
+
+    .projects-grid-full {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: var(--spacing-lg);
+    }
+
+    .project-card > img {
+        width: 100%;
+        height: auto;
+
+        aspect-ratio: 1200 / 630;
+
+        object-fit: cover;
+        object-position: center center;
+    }
+}
+
+
+/* ============================================
+   Mobile Responsive
+============================================ */
+
+@media (max-width: 768px) {
+
+    .projects-gallery {
+        padding: var(--spacing-3xl) 0;
+    }
+
+    .projects-grid-full {
+        grid-template-columns: 1fr;
+
+        gap: var(--spacing-xl);
+    }
+
+
+    /* ========================================
+       Mobile Project Image
+       Original: 1200 × 630
+    ======================================== */
+
+    .project-card > img {
+        display: block;
+
+        width: 100%;
+        height: auto;
+
+        aspect-ratio: 1200 / 630;
+
+        object-fit: cover;
+        object-position: center center;
+
+        background-color: #f4f4f4;
+
+        border-radius: 20px 20px 0 0;
+    }
+
+
+    .project-info {
+        padding: var(--spacing-lg);
+    }
+
+    .project-info h3 {
+        font-size: var(--text-lg);
+    }
+
+    .project-info .info-item {
+        gap: 10px;
+
+        font-size: var(--text-sm);
+    }
+
+    .project-info .info-item i {
+        width: 22px;
+        min-width: 22px;
+    }
+
+    .card-description {
+        line-height: 1.6;
+    }
+}
+
+
+/* ============================================
+   Small Mobile
+============================================ */
+
+@media (max-width: 480px) {
+
+    .projects-gallery {
+        padding: var(--spacing-2xl) 0;
+    }
+
+
+    .projects-filter {
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        gap: 12px;
+
+        margin-bottom: 40px;
+
+        flex-wrap: wrap;
+    }
+
+
+    .filter-btn {
+        border: 1px solid #d6d6d6;
+
+        background: #ffffff;
+        color: #1e2a3e;
+
+        padding: 10px 22px;
+
+        border-radius: 30px;
+
+        cursor: pointer;
+
+        font-size: 14px;
+        font-weight: 600;
+
+        transition: all 0.3s ease;
+    }
+
+    .filter-btn:hover {
+        transform: translateY(-2px);
+    }
+
+    .filter-btn.active {
+        background: #1e2a3e;
+
+        color: #ffffff;
+
+        border-color: #1e2a3e;
+    }
+
+
+    /* ========================================
+       Small Mobile Project Card
+    ======================================== */
+
+    .project-card {
+        border-radius: 18px;
+    }
+
+
+    .project-card > img {
+        display: block;
+
+        width: 100%;
+        height: auto;
+
+        aspect-ratio: 1200 / 630;
+
+        object-fit: cover;
+        object-position: center center;
+
+        border-radius: 18px 18px 0 0;
+    }
+
+
+    .project-info {
+        padding: var(--spacing-md);
+    }
+
+    .project-info h3 {
+        margin-bottom: var(--spacing-md);
+
+        font-size: var(--text-lg);
+    }
+
+    .project-info .info-item {
+        gap: 10px;
+
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .project-info .info-item i {
+        width: 22px;
+        min-width: 22px;
+    }
+
+
+    .project-info .btn {
+        width: 100%;
+
+        align-self: stretch;
+    }
 }

@@ -1,0 +1,596 @@
+/* ============================================
+   pages/case-study.css
+   GFC Builder
+============================================ */
+
+
+
+/* ============================================
+   Project Overview
+   ============================================ */
+
+.case-overview {
+    padding: var(--spacing-4xl) 0;
+    background: var(--color-white);
+}
+
+.case-overview-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+    gap: var(--spacing-3xl);
+    align-items: start;
+}
+
+/* ============================================
+   Case Content
+   ============================================ */
+
+.case-content {
+    min-width: 0;
+}
+
+.case-content h2 {
+    margin-bottom: var(--spacing-md);
+}
+
+.case-content p {
+    margin-bottom: var(--spacing-md);
+}
+
+/* ============================================
+   Overview Image
+   ============================================ */
+
+.overview-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 16px;
+}
+
+/* ============================================
+   Image Caption
+   ============================================ */
+
+.image-caption {
+    margin-top: 8px;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: var(--color-gray-600);
+}
+
+/* ============================================
+   Project Facts
+   ============================================ */
+
+.project-facts {
+    padding: var(--spacing-xl);
+    background: var(--color-gray-100);
+    border-radius: 16px;
+
+    /* Ensure readable text inside facts box */
+    color: #1e2a3e;
+}
+
+/* Project Facts Heading */
+.project-facts h3 {
+    margin-top: 0;
+    margin-bottom: var(--spacing-lg);
+
+    color: #1e2a3e;
+    font-weight: 700;
+}
+
+/* ============================================
+   Individual Fact
+   ============================================ */
+
+.fact-item {
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(30, 42, 62, 0.12);
+}
+
+.fact-item:last-child {
+    border-bottom: none;
+}
+
+/* Fact Label
+   Example:
+   Project Name
+   Location
+   Project Type
+   Status
+   Services
+*/
+.fact-item span {
+    display: block;
+    margin-bottom: 4px;
+
+    font-size: 0.875rem;
+    line-height: 1.4;
+    font-weight: 500;
+
+    color: #4b5563;
+}
+
+/* Fact Value
+   Example:
+   Premium Residential Villa
+   Coimbatore, Tamil Nadu
+   Residential Villa
+   Completed
+*/
+.fact-item strong {
+    display: block;
+
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 600;
+
+    color: #1e2a3e;
+}
+
+/* ============================================
+   Tablet
+   ============================================ */
+
+@media (max-width: 992px) {
+
+    .case-overview-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-2xl);
+    }
+
+    .project-facts {
+        width: 100%;
+    }
+}
+
+/* ============================================
+   Mobile
+   ============================================ */
+
+@media (max-width: 768px) {
+
+    .case-overview {
+        padding: var(--spacing-3xl) 0;
+    }
+
+    .case-overview-grid {
+        gap: var(--spacing-xl);
+    }
+
+    /* Overview Image */
+    .overview-image {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        border-radius: 12px;
+    }
+
+    /* Project Facts */
+    .project-facts {
+        width: 100%;
+        padding: var(--spacing-lg);
+        border-radius: 12px;
+
+        color: #1e2a3e;
+    }
+
+    .project-facts h3 {
+        color: #1e2a3e;
+    }
+
+    .fact-item span {
+        font-size: 0.8rem;
+        color: #4b5563;
+    }
+
+    .fact-item strong {
+        font-size: 0.95rem;
+        color: #1e2a3e;
+    }
+
+    /* Image Caption */
+    .image-caption {
+        margin-top: 7px;
+        font-size: 0.8rem;
+    }
+}
+
+/* ============================================
+   Small Mobile
+   ============================================ */
+
+@media (max-width: 480px) {
+
+
+
+
+    .case-overview {
+        padding: var(--spacing-2xl) 0;
+    }
+
+    .overview-image {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .project-facts {
+        padding: var(--spacing-md);
+        border-radius: 10px;
+    }
+
+    .project-facts h3 {
+        font-size: 1.1rem;
+    }
+
+    .fact-item {
+        padding: 12px 0;
+    }
+
+    .fact-item span {
+        font-size: 0.78rem;
+    }
+
+    .fact-item strong {
+        font-size: 0.92rem;
+        line-height: 1.5;
+    }
+
+    .image-caption {
+        font-size: 0.78rem;
+    }
+
+
+}
+
+/* ============================================
+   Project Highlights
+============================================ */
+
+.project-highlights {
+
+  padding: 70px 0;
+    background: var(--color-gray-100);
+}
+
+.project-highlights .section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.highlight-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    column-gap: 32px;
+    row-gap: 40px;
+
+    align-items: start;
+
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.highlight-card {
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+
+    align-self: start;
+
+    box-sizing: border-box;
+transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+}
+
+.timeline-card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.highlight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+
+.timeline-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.highlight-card i {
+    font-size: 2rem;
+    color: var(--color-accent);
+    margin-bottom: var(--spacing-md);
+}
+
+.highlight-card h3 {
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-primary);
+}
+
+.highlight-card p {
+    color: var(--color-gray-600);
+    font-size: var(--text-sm);
+}
+
+/* ============================================
+   Construction Journey
+============================================ */
+
+.construction-journey {
+    padding: var(--spacing-4xl) 0;
+    background: var(--color-white);
+}
+
+.construction-journey .section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.timeline{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+
+gap:20px;
+
+}
+
+.timeline-card{
+
+padding:25px;
+
+}
+
+.timeline-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.timeline-number {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto var(--spacing-lg);
+    border-radius: 50%;
+    background: var(--color-accent);
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: var(--weight-bold);
+    font-size: var(--text-lg);
+}
+
+.timeline-card h3 {
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-primary);
+}
+
+.timeline-card p {
+    color: var(--color-gray-600);
+}
+
+/* ============================================
+   Gallery
+============================================ */
+
+.project-gallery {
+    padding: var(--spacing-4xl) 0;
+    background: var(--color-gray-100);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+
+    width: 100%;
+    margin: 32px auto 0;
+
+    padding: 0;
+    box-sizing: border-box;
+}
+.gallery-card {
+    background: var(--color-white);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.gallery-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.gallery-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+}
+
+.project-info {
+    padding: 20px;
+}
+
+.project-info h3 {
+    margin: 0 0 8px;
+    color: var(--color-primary);
+}
+
+.project-info p {
+    margin: 0;
+    color: var(--color-gray-600);
+    font-size: var(--text-sm);
+    line-height: 1.6;
+}
+
+/* ============================================
+   Video Gallery
+============================================ */
+
+.project-videos {
+    padding: var(--spacing-4xl) 0;
+    background: var(--color-white);
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.video-grid {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto 0;
+}
+
+.video-grid video {
+    width: 100%;
+    height: auto;
+    display: block;
+
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+
+    background: #000;
+}
+
+
+/* ============================================
+   Mobile
+============================================ */
+
+@media (max-width: 768px) {
+
+    .project-videos {
+        padding: var(--spacing-3xl) 0;
+    }
+
+    .video-grid {
+        max-width: 100%;
+    }
+
+    .video-grid video {
+        border-radius: 10px;
+    }
+
+}
+/* ============================================
+   Final Outcome
+============================================ */
+
+.final-outcome {
+    padding: var(--spacing-4xl) 0;
+    background: var(--color-primary);
+}
+
+.outcome-box {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--color-white);
+}
+
+.outcome-box h2 {
+    color: var(--color-white);
+    margin: var(--spacing-md) 0;
+}
+
+.outcome-box p {
+    color: var(--color-gray-200);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.8;
+}
+
+/* ============================================
+   Responsive
+============================================ */
+
+@media (max-width: 992px) {
+
+ .highlight-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        column-gap: 28px;
+        row-gap: 36px;
+    }
+
+
+   
+
+    .timeline {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+  
+
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+
+.project-highlights {
+        padding: 50px 0;
+    }
+
+    .project-highlights .section-heading {
+        margin-bottom: 36px;
+    }
+
+    .highlight-grid {
+        grid-template-columns: 1fr;
+
+        row-gap: 36px;
+        column-gap: 0;
+
+        align-items: start;
+    }
+
+    .highlight-card {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+     .timeline {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .timeline-number {
+        width: 50px;
+        height: 50px;
+    }
+
+  
+
+    .outcome-box {
+        padding: 0 var(--spacing-md);
+    }
+ 
+
+}
+
+
+
+

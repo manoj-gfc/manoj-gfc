@@ -1,3 +1,5 @@
+
+
 /* ============================================
    PAGE: BLOG
    File: pages/blog.css
@@ -6,38 +8,36 @@
 
 
 /* ============================================
-   Blog Page Header
-============================================ */
+   Blog Page
+   ============================================ */
 
-
-
+.blog-full {
+    padding: var(--spacing-4xl) 0;
+    background: #f8f8f8;
+}
 
 
 /* ============================================
    Blog Listing
    ============================================ */
 
-.blog-full {
-    padding: var(--spacing-4xl) 0;
-
-    background: var(--color-gray-100);
-}
-
 .blog-grid-full {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: var(--spacing-lg);
+    width: 100%;
 }
+
 
 /* ============================================
    Blog Card
    ============================================ */
 
 .blog-post {
+    min-width: 0;
     overflow: hidden;
 
     background: var(--color-white);
-
     border-radius: var(--radius-lg);
 
     box-shadow: var(--shadow-sm);
@@ -49,38 +49,74 @@
 
 .blog-post:hover {
     transform: translateY(-4px);
-
     box-shadow: var(--shadow-lg);
 }
 
-.blog-post img {
-    width: 100%;
-    height: 250px;
 
-    object-fit: cover;
+/* ============================================
+   Blog Card Image
+   Full image visible - no cropping
+   ============================================ */
+
+.blog-post img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
+
+/* ============================================
+   Blog Card Title
+   ============================================ */
+
 .blog-post h3 {
-    padding: var(--spacing-md) var(--spacing-lg) var(--spacing-xs);
+    margin: 0;
+
+    padding:
+        var(--spacing-md)
+        var(--spacing-lg)
+        var(--spacing-xs);
 
     font-family: var(--font-primary);
     font-size: var(--text-xl);
     font-weight: var(--weight-semibold);
+    line-height: 1.25;
 
     color: var(--color-primary);
+
+    /* Prevent words from breaking in the middle */
+    word-break: normal;
+    overflow-wrap: normal;
+    hyphens: none;
 }
 
+
+/* ============================================
+   Blog Card Description
+   ============================================ */
+
 .blog-post p {
+    margin: 0;
     padding: 0 var(--spacing-lg);
 
     font-size: var(--text-sm);
+    line-height: 1.6;
+
     color: var(--color-gray-500);
 }
+
+
+/* ============================================
+   Blog Card Link
+   ============================================ */
 
 .blog-post a {
     display: inline-block;
 
-    padding: var(--spacing-xs) var(--spacing-lg) var(--spacing-md);
+    padding:
+        var(--spacing-xs)
+        var(--spacing-lg)
+        var(--spacing-md);
 
     font-size: var(--text-sm);
     font-weight: var(--weight-medium);
@@ -92,13 +128,13 @@
     color: var(--color-accent-dark);
 }
 
+
 /* ============================================
    Blog Detail
    ============================================ */
 
 .blog-post-detail {
     padding: var(--spacing-4xl) 0;
-
     background: var(--color-white);
 }
 
@@ -107,7 +143,10 @@
 }
 
 .blog-post-detail h2 {
-    margin: var(--spacing-2xl) 0 var(--spacing-md);
+    margin:
+        var(--spacing-2xl)
+        0
+        var(--spacing-md);
 
     font-family: var(--font-display);
     font-size: var(--text-3xl);
@@ -116,7 +155,10 @@
 }
 
 .blog-post-detail h3 {
-    margin: var(--spacing-xl) 0 var(--spacing-sm);
+    margin:
+        var(--spacing-xl)
+        0
+        var(--spacing-sm);
 
     font-family: var(--font-primary);
     font-size: var(--text-xl);
@@ -132,9 +174,9 @@
 
 .blog-post-detail ul li {
     margin-bottom: var(--spacing-sm);
-
     color: var(--color-gray-600);
 }
+
 
 /* ============================================
    Call To Action
@@ -154,23 +196,113 @@
 
 .cta-box h3 {
     margin-bottom: var(--spacing-sm);
-
     font-family: var(--font-primary);
 }
 
 .cta-box p {
     margin-bottom: var(--spacing-md);
-
     color: var(--color-gray-600);
 }
 
 .cta-box .btn {
     color: var(--color-white);
     background: var(--color-accent);
-
     border: none;
 }
 
 .cta-box .btn:hover {
     background: var(--color-accent-dark);
 }
+
+
+/* ============================================
+   TABLET
+   ============================================ */
+
+@media (max-width: 900px) {
+
+    .blog-grid-full {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--spacing-md);
+    }
+
+    .blog-post img {
+        width: 100%;
+        height: auto;
+    }
+
+    .blog-post h3 {
+        font-size: var(--text-lg);
+        line-height: 1.3;
+    }
+}
+
+
+/* ============================================
+   MOBILE
+   ============================================ */
+
+@media (max-width: 600px) {
+
+    .blog-full {
+        padding: var(--spacing-2xl) 0;
+        background: #f8f8f8;
+    }
+
+    .blog-grid-full {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .blog-post {
+        width: 100%;
+        min-width: 0;
+    }
+
+    /*
+     * Keep the complete promotional image visible.
+     * No fixed height and no cropping.
+     */
+    .blog-post img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .blog-post h3 {
+        padding:
+            var(--spacing-md)
+            var(--spacing-lg)
+            var(--spacing-xs);
+
+        font-size: var(--text-xl);
+        line-height: 1.25;
+
+        word-break: normal;
+        overflow-wrap: normal;
+        hyphens: none;
+    }
+
+    .blog-post p {
+        padding: 0 var(--spacing-lg);
+        line-height: 1.6;
+    }
+}
+
+
+/* ============================================
+   SMALL MOBILE
+   ============================================ */
+
+@media (max-width: 400px) {
+
+    .blog-post h3 {
+        font-size: var(--text-lg);
+    }
+
+    .blog-post img {
+        width: 100%;
+        height: auto;
+    }
+}
+

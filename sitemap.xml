@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset 
+
+xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://www.gfcbuilder.com/</loc>
@@ -14,11 +16,16 @@
 </url>
 
 <url>
+<loc>https://www.gfcbuilder.com/projects/case-study/</loc>
+</url>
+
+
+<url>
 <loc>https://www.gfcbuilder.com/blog/</loc>
 </url>
 
 <url>
-<loc>https://www.gfcbuilder.com/blog/sustainable-materials/</loc>
+<loc>https://www.gfcbuilder.com/blog/house-construction-cost-coimbatore/</loc>
 </url>
 
 <url>
@@ -27,6 +34,10 @@
 
 <url>
 <loc>https://www.gfcbuilder.com/blog/cost-reduction-tips/</loc>
+</url>
+
+<url>
+<loc>https://www.gfcbuilder.com/blog/sustainable-materials/</loc>
 </url>
 
 <url>
