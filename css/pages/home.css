@@ -175,7 +175,7 @@
     font-size: var(--text-xl);
     font-style: italic;
     font-weight: 600;
-    color: #1253bc; /* Darker brown improves readability */
+    color: #1359c9; /* Darker  improves readability */
 }
 /* Improve contrast for white sections */
 
@@ -185,7 +185,7 @@
 .blog .section-tag,
 .video-showcase .section-tag,
 .testimonials .section-tag {
-    color: #1253bc;
+    color: #1359c9;
 }
 
 /* ============================================
